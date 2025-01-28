@@ -1,0 +1,19 @@
+.option-separator, #media-option, #reviews-option {
+  color: gray;
+}
+
+#about-option {
+  color: black
+}
+
+.past-review {
+  border-radius: 0;
+  border: none;
+  padding-top: 1%;
+}
+
+.review-text {
+  padding-bottom: 3cap;
+}
+
+
