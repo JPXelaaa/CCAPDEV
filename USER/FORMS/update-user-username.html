@@ -6,30 +6,33 @@
   <title>Login Pop-up</title>
   <style>
     .modal {
-      /* display: none; */
-      position: fixed; 
+      display: none; 
+      position: fixed;
       z-index: 1;
       left: 0;
       top: 0;
-      width: 100%; 
-      height: 100%; 
+      width: 100%;
+      height: 100%;
       background-color: rgba(0, 0, 0, 0.4); 
+      display: flex;
+      justify-content: center;
+      align-items: center; 
     }
 
     .modal-content {
       background-color: white;
-      margin: 10% auto;
       padding: 20px;
       border: 1px solid #888;
-      width: 30%; 
-      max-width: 300px; 
       border-radius: 10px;
+      width: 100%;
+      max-width: 300px; 
+      text-align: center; 
     }
 
-    #sign-up-title {
-      text-align: center;
-      margin-left: 6%;
+    #log-in-title {
+      margin-bottom: 20px; 
     }
+
 
     .close {
       color: #aaa;
@@ -46,36 +49,30 @@
     }
 
     .form-label {
-      margin-top: 10%;
-      margin-bottom: 10%;
-      text-align: center;
-    }
-
-    #sign-up-title {
-      margin-bottom: 15%;
+      margin-bottom: 0;
     }
 
     .account-prompt {
-      margin-top: 15%;
+      margin-top: 15px;
     }
 
     .form-input {
-      width: 100%;
+      width: 85%;
       padding: 10px;
+      margin: 20px 0;
       border: 1px solid #ccc;
       border-radius: 5px;
     }
 
     .form-button {
-      width: 98%;
+      width: 50%;
       padding: 10px;
-      background-color: #4CAF50;
-      color: white;
+      background-color: #ccc;
+      color: black;
       border: none;
       border-radius: 5px;
       cursor: pointer;
-      align-items: center;
-      margin-top: 15%;
+      margin-top: 5%;
     }
 
     .form-button:hover {
@@ -84,38 +81,39 @@
   </style>
 </head>
 <body>
+
+  <button id="loginBtn">update username button</button>
+
   <div id="loginModal" class="modal">
     <!-- Modal content -->
     <div class="modal-content">
       <span class="close">&times;</span>
-      <h2 id="sign-up-title">Sign Up</h2>
+      <h2 id="log-in-title">Update Username</h2>
       
-      <!-- Login Form -->
       <form action="/login" method="post">
-        <h4 class="form-label">Register as</h4>
-        <button class="form-input" id="register-reviewer">Reviewer</button>
-        <h4 class="form-label">or</h4>
-        <button class="form-input" id="register-establishment">Establishment Owner</button>
+        <input class="form-input" type="text" name="username" placeholder="Enter Username" value="trishaguarin">
+        <button class="form-button" type="submit">Update</button>
       </form>
-
-      <div class="account-prompt">
-        
-        Already have an account? Log in
-        <a href="#">here</a>.
-      </div>
     </div>
   </div>
 
   <script>
+    var modal = document.getElementById("loginModal");
     var btn = document.getElementById("loginBtn");
     var span = document.getElementsByClassName("close")[0];
 
     btn.onclick = function() {
-      modal.style.display = "block";
+      modal.style.display = "flex"; 
     }
     
     span.onclick = function() {
       modal.style.display = "none";
+    }
+
+    window.onclick = function(event) {
+      if (event.target == modal) {
+        modal.style.display = "none";
+      }
     }
   </script>
 

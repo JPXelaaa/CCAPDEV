@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Login Pop-up</title>
     <link rel="stylesheet" href="starting-page.css">
+    <link rel="stylesheet" href="home-page.css">
   </head>
 
   <body>
@@ -13,9 +14,14 @@
         <img src="https://www.pngkey.com/png/full/529-5291672_png-image-no-background.png" id="page-logo">
       </div>
 
+      <div class="nav-center">
+      </div>
+
       <div class="nav-right">
-        <button id="log-in">LOG IN</button>
-        <button id="sign-up">SIGN UP</button>
+				<h4><a href="#">Home</a></h4>
+				<h4><a href="user-profile-reviews.html">Profile</a></h4>
+        <div class="profile-option">
+        </div>
       </div>
     </nav>
 
@@ -267,61 +273,6 @@
           
     </div>
 
-    <script>
-        var login = document.getElementById("log-in");
-    
-        login.onclick = function() {
-            fetch('log-in.html')
-                .then(response => response.text())  
-                .then(html => {
-                
-                    var modalContainer = document.createElement('div');
-                    modalContainer.innerHTML = html;
-    
-                
-                    document.body.appendChild(modalContainer);
-    
-            
-                    var modal = document.getElementById('loginModal');
-                    modal.style.display = 'block';
-    
-            
-                    var closeBtn = modal.querySelector('.close');
-                    closeBtn.onclick = function() {
-                        modal.style.display = 'none';
-                        modalContainer.remove();
-                    };
-                })
-                .catch(error => console.error('Error loading modal:', error));
-        };
-
-
-
-
-        var signup = document.getElementById("sign-up");
-    
-        signup.onclick = function() {
-            fetch('sign-up-prompt.html')
-                .then(response => response.text())  
-                .then(html => {
- 
-                    var modalContainer = document.createElement('div');
-                    modalContainer.innerHTML = html;
-
-                    document.body.appendChild(modalContainer);
-                    var modal = document.getElementById('loginModal');
-                    modal.style.display = 'block';
-    
-                    var closeBtn = modal.querySelector('.close');
-                    closeBtn.onclick = function() {
-                        modal.style.display = 'none';
-                        modalContainer.remove();
-                    };
-                })
-                .catch(error => console.error('Error loading modal:', error));
-        };
-    </script>
-    
 
   </body>
 </html>

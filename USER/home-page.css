@@ -1,0 +1,26 @@
+.nav-center, .nav-right {
+  display: flex;
+  align-items: center;
+}
+
+.nav-right {
+  justify-content: center;
+}
+
+.nav-right h4 {
+  margin: 0;
+}
+
+.nav-right a {
+  margin: 0 10px;
+  text-decoration: none;
+  color: inherit;
+}
+
+.profile-option, .profile-picture {
+  height: 40px;
+  width: 40px;
+  border-radius: 50px;
+  background-color: black;
+  margin-left: 20px;
+}
