@@ -71,9 +71,7 @@
       flex-grow: 1;
       display: flex;
       flex-direction: column;
-      gap: 20px;
       margin-left: 50px;
-      margin-top: -30px;
     }
 
     textarea {
@@ -89,13 +87,6 @@
 
     .form-description {
       height: 80px;
-    }
-
-    .steps-container {
-      display: flex;
-      justify-content: center;    
-      align-items: center;
-      margin-top: 30px;
     }
 
     .arrow {
@@ -137,6 +128,12 @@
       border-radius: 50%;
       margin: 0 5px;
     }
+
+    p {
+      margin-bottom: 5px;
+      font-weight: bold;
+    }
+
   </style>
 </head>
 
@@ -156,7 +153,9 @@
 
         <!-- Input Part -->
         <div class="input-container">
+          <p>Establishment Name</p>
           <input class="form-input" type="text" name="Establishment name" placeholder="Establishment name" required>
+          <p>Overview of Business</p>
           <textarea class="form-description" name="Overview" placeholder="Short description of your business" required></textarea>
         </div>
       </div>
