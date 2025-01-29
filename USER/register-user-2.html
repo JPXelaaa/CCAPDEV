@@ -1,3 +1,4 @@
+@ -0,0 +1,165 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -20,10 +21,11 @@
 
     .modal-content {
       background-color: white;
-      padding: 60px;
+      margin: 10% auto;
+      padding: 20px;
       border: 1px solid #888;
-      width: 70%; 
-      max-width: 600px;
+      width: 30%; 
+      max-width: 300px;
       border-radius: 10px;
     }
 
@@ -34,8 +36,6 @@
     }
 
     .content-row {
-      display: flex;
-      justify-content: space-between;
       align-items: center;
     }
 
@@ -43,7 +43,6 @@
       display: flex;
       flex-direction: column;
       align-items: center;
-      margin-right: 20px;
     }
 
     .logo {
@@ -79,7 +78,7 @@
     }
 
     .form-input, .form-description {
-      width: 100%;
+      width: 90%;
       padding: 10px;
       border: 1px solid #ccc;
       border-radius: 5px; 
@@ -113,7 +112,7 @@
       margin-top: 25px;      
     }
 
-    .steps, .current-step {
+    .steps {
       background-color: rgb(194, 188, 188);
       width: 12px;
       height: 12px;
@@ -123,11 +122,17 @@
 
     .current-step {
       background-color: rgb(0, 0, 0);
+      width: 12px;
+      height: 12px;
+      border-radius: 50%;
+      margin: 0 5px;
     }
 
     p {
       margin-bottom: 5px;
       font-weight: bold;
+      align-self: flex-start;
+      margin-left: 2%;
     }
 
   </style>
@@ -137,32 +142,22 @@
   <div id="loginModal" class="modal">
     <!-- Modal content -->
     <div class="modal-content">
-      <h2 id="sign-up-title">Sign Up</h2>
+      <h2 id="sign-up-title">Personify Account</h2>
 
       <!-- Row with Logo and Input -->
       <div class="content-row">
         <!-- Logo Part -->
         <div class="logo-container">
-          <div class="logo"></div>
-          <p id="wordlogo">Add Logo <img id="pen" src="https://www.svgrepo.com/show/155904/pencil-black-gross-tool.svg" alt="Pen Icon"></p>
-        </div>
-
-        <!-- Input Part -->
-        <div class="input-container">
-          <p>Establishment Name</p>
-          <input class="form-input" type="text" name="Establishment name" placeholder="Establishment name" required>
-          <p>Overview of Business</p>
-          <textarea class="form-description" name="Overview" placeholder="Short description of your business" required></textarea>
-        </div>
+          <p>Short description</p>
+          <textarea class="form-description" name="Overview" placeholder="Tell us something about yourself (e.g. hobbies, interests)" required></textarea></div>
       </div>
 
       <!-- Navigation Bar -->
       <div class="steps-container">
         <div class="arrow left"></div>
         <div class="steps"></div>
+        <div class="steps"></div>
         <div class="current-step"></div>
-        <div class="steps"></div>
-        <div class="steps"></div>
         <div class="arrow right"></div>
       </div>
     </div>
