@@ -37,8 +37,7 @@
       padding: 10px;
       border: 1px solid #ccc;
       border-radius: 5px;
-      margin-top: 10px;
-      margin-bottom: 10px;
+      margin-bottom: 5px;
     }
 
     .arrow {
@@ -76,6 +75,11 @@
       margin: 0 5px;
     }
 
+    p {
+      margin-bottom: 5px;
+      font-weight: bold;
+    }
+
   </style>
 </head>
 
@@ -87,8 +91,11 @@
       <!-- Login Form -->
       <form action="/login" method="post">
         <h2 id="sign-up-title">Account Details</h2>
+        <p> Email Address</p>
         <input class="form-input" type="text" name="email address" placeholder="Input email address" required>
+        <p> Username</p>
         <input class="form-input" type="text" name="username" placeholder="Input username" required>
+        <p> Password</p>
         <input class="form-input" type="text" name="password" placeholder="Input password" required>
       </form>
 
