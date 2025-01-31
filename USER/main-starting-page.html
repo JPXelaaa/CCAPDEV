@@ -7,6 +7,70 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
     <link rel="stylesheet" href="starting-page.css">
+
+    <style>
+    
+    .left-main {
+      position: relative;
+      width: max-content;  
+      overflow: hidden;
+      align-content: center;
+      justify-content: center;
+    }
+    
+    .main-section {
+      display: flex;
+      transition: transform 1s ease-in-out;
+      width: 100%;
+      overflow: hidden;
+      margin-left: 8%;
+    }
+    
+    .establishment-preview {
+      width: 35vh; 
+      height: 45vh;
+      margin: 0 3vh; 
+      background-color: white;
+      transition: transform 1s ease; 
+      align-self: center;
+    }
+    
+    .establishment-preview.active {
+      transform: scale(1.5); 
+      margin: 5% 
+    }
+
+    .prev, .next {
+      position: absolute;
+      top: 50%;
+      width: 50px;
+      transform: translateY(-50%);
+      background-color: rgba(0, 0, 0, 0.5);
+      color: white;
+      border: none;
+      padding: 10px;
+      cursor: pointer;
+      font-size: 20px;
+      border-radius: 50%;
+      z-index: 1;
+    }
+    
+    .prev {
+      left: 5%;
+    }
+    
+    .next {
+      left: 70%;
+    }
+    
+    .prev.hide, .next.hide {
+      display: none;
+    }
+    
+    
+    
+        </style>
+
   </head>
 
   <body>
@@ -23,19 +87,14 @@
       </div>
     </nav>
 
-    <div class="image-cover">
-        <img src="http://cdn.ebaumsworld.com/mediaFiles/picture/2452130/85386506.jpg" alt="Cover Image">
-        <div class="search-container">
-            <h1 class="welcome-text">Lalalalala!</h1>
-            <input type="text" placeholder="Search establishment..." class="search-bar">
-        </div>
-    </div>
-      
-
-    <div class="preview-bar">
-        <div class="preview-label">
-            View Establishments
-        </div>
+    <div class="change-display">
+      <h2>View Establishments</h2>
+      <ul class="pagination">
+        <li class="page-item"><a class="page-link" href="#"><img src="https://www.svgrepo.com/show/334512/carousel.svg"></a></li>
+        <li class="page-item"><a class="page-link" href="#"><img src="https://www.svgrepo.com/show/532952/grid.svg"></a></li>
+        <li class="page-item"><a class="page-link" href="#"><img src="https://www.svgrepo.com/show/532555/search.svg"></a></li>
+        <li class="page-item"><a class="page-link" href="#"><img src="https://www.svgrepo.com/show/532169/filter.svg"></a></li>
+      </ul>
     </div>
 
     <div class="main-page">
@@ -193,86 +252,64 @@
                         (three lines at most)
                     </div>
                 </div>  
-        </div>
+              </div>
 
         </div>
 
-        <nav aria-label="Page navigation example">
-            <ul class="pagination">
-              <li class="page-item">
-                <a class="page-link" href="#" aria-label="Previous">
-                  <span aria-hidden="true">&laquo;</span>
-                  <span class="sr-only">Previous</span>
-                </a>
-              </li>
-              <li class="page-item"><a class="page-link" href="#">1</a></li>
-              <li class="page-item"><a class="page-link" href="#">2</a></li>
-              <li class="page-item"><a class="page-link" href="#">3</a></li>
-              <li class="page-item">
-                <a class="page-link" href="#" aria-label="Next">
-                  <span aria-hidden="true">&raquo;</span>
-                  <span class="sr-only">Next</span>
-                </a>
-              </li>
-            </ul>
-          </nav>
+        <div class="carousel-buttons">
+          <button class="prev" onclick="moveSlide(-1)">&#10094;</button>
+          <button class="next" onclick="moveSlide(1)">&#10095;</button>
+        </div>
+
     </div>
 
     <script>
-        var login = document.getElementById("log-in");
+  
+      let currentIndex = 0;
     
-        login.onclick = function() {
-            fetch('log-in.html')
-                .then(response => response.text())  
-                .then(html => {
-                
-                    var modalContainer = document.createElement('div');
-                    modalContainer.innerHTML = html;
+    function updateActiveItem() {
+      const items = document.querySelectorAll('.establishment-preview');
+      const leftButton = document.querySelector('.prev');
+      const rightButton = document.querySelector('.next');
     
-                
-                    document.body.appendChild(modalContainer);
+      items.forEach((item, index) => {
+        item.classList.remove('active');  // Remove active class from all items
+        if (index === currentIndex) {
+          item.classList.add('active');  // Add active class to the current item
+        }
+      });
     
-            
-                    var modal = document.getElementById('loginModal');
-                    modal.style.display = 'block';
+      if (currentIndex == 0) {
+        leftButton.classList.add('hide');
+      } else {
+        leftButton.classList.remove('hide');
+      }
     
-            
-                    var closeBtn = modal.querySelector('.close');
-                    closeBtn.onclick = function() {
-                        modal.style.display = 'none';
-                        modalContainer.remove();
-                    };
-                })
-                .catch(error => console.error('Error loading modal:', error));
-        };
-
-
-
-
-        var signup = document.getElementById("sign-up");
+      if (currentIndex == 5) {
+        rightButton.classList.add('hide');
+      } else {
+        rightButton.classList.remove('hide');
+      }
+    }
     
-        signup.onclick = function() {
-            fetch('sign-up-prompt.html')
-                .then(response => response.text())  
-                .then(html => {
- 
-                    var modalContainer = document.createElement('div');
-                    modalContainer.innerHTML = html;
-
-                    document.body.appendChild(modalContainer);
-                    var modal = document.getElementById('loginModal');
-                    modal.style.display = 'block';
+    function moveSlide(direction) {
+      const carousel = document.querySelector('.main-section');
+      const items = document.querySelectorAll('.establishment-preview');
+      const totalItems = items.length;
     
-                    var closeBtn = modal.querySelector('.close');
-                    closeBtn.onclick = function() {
-                        modal.style.display = 'none';
-                        modalContainer.remove();
-                    };
-                })
-                .catch(error => console.error('Error loading modal:', error));
-        };
+      currentIndex = (currentIndex + direction) % totalItems;  
+      
+      updateActiveItem();
+    
+      const offset = -(currentIndex * (window.innerWidth * 0.15)); 
+      carousel.style.transform = `translateX(${offset}px)`;
+    }
+    
+    updateActiveItem();
+    
+    
     </script>
-    
+
 
   </body>
 </html>

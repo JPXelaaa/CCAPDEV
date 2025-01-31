@@ -190,7 +190,15 @@ body, html {
   background-color: rgb(225, 108, 108);
 }
 
-.helpful, .unhelpful {
+.edit-post {
+  background-color: rgb(108, 214, 108);
+}
+
+.delete-post {
+  background-color: rgb(225, 108, 108);
+}
+
+.helpful, .unhelpful, .edit-post, .delete-post {
   display: inline-block;
   margin: 0 0 10px 15px; 
   text-align: center; 
@@ -198,7 +206,7 @@ body, html {
   padding: 3px 10px;
 }
 
-.helpful:hover, .unhelpful:hover {
+.helpful:hover, .unhelpful:hover, .edit-post:hover, .delete-post:hover  {
   cursor: pointer; 
   opacity: 0.8; 
 }
