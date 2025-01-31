@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Edit Establishment Details</title>
+  <link rel="stylesheet" href="edit-establishment-deets.css">
+
+</head>
+
+<body>
+
+  <!-- NAVIGATION BAR -->
+  <nav>
+    <div class="nav-left">
+      <img src="https://www.pngkey.com/png/full/529-5291672_png-image-no-background.png" id="page-logo">
+    </div>
+
+    <div class="nav-center"></div>
+
+    <div class="nav-right">
+      <h4><a href="#">Home</a></h4>
+      <h4><a href="user-profile-reviews.html">Profile</a></h4>
+      <div class="profile-option"></div>
+    </div>
+  </nav>
+
+  <div class="content-row">
+    <!-- Left Section: Business Details -->
+    <div class="left-section">
+      <form action="/login" method="post">
+        <h2 id="sign-up-title">Edit Business Details</h2>
+  
+        <p>Business Name</p>
+        <input class="form-input" type="text" name="Business Name" required>
+  
+        <p>Address 1</p>
+        <input class="form-input" type="text" name="Address 1" placeholder="Address 1" required>
+  
+        <p>Address 2</p>
+        <input class="form-input" type="text" name="Address 2" placeholder="Address 2">
+  
+        <p>City</p>
+        <input class="form-input" type="text" name="City" placeholder="City" required>
+  
+        <p>Postal Code</p>
+        <input class="form-input" type="text" name="Postal Code" pattern="^[0-9]{4}$" maxlength="4" placeholder="4-digit code" required>
+  
+        <p>Province</p>
+        <select class="form-select" name="province">
+          <option value="" selected disabled>None</option>
+          <option value="Manila">Manila</option>
+          <option value="Makati">Makati</option>
+          <option value="Quezon City">Quezon City</option>
+          <option value="Caloocan">Caloocan</option>
+        </select>
+  
+        <p>Phone Number</p>
+        <input class="form-input" type="tel" name="Phone Number" pattern="[0-9]{4}-[0-9]{3}-[0-9]{4}" placeholder="09XX-XXX-XXXX" required>
+  
+        <p>Website (optional)</p>
+        <input class="form-input" type="text" name="Website" placeholder="http://www.companyaddress.com.ph">
+  
+        <p>Categories</p>
+        <input class="form-input" type="text" name="Categories" placeholder="Add up to three inputs only (comma separated)" required>
+  
+        <p>Hours</p>
+        <div class="hours-row">
+          <select class="form-select" name="Day">
+            <option value="" selected disabled>Day</option>
+            <option value="Monday">Mon</option>
+            <option value="Tuesday">Tues</option>
+            <option value="Wednesday">Wed</option>
+            <option value="Thursday">Thurs</option>
+          </select>
+  
+          <select class="form-select" name="Start Time">
+            <option value="" selected disabled>Start</option>
+            <option value="10:00AM">10:00AM</option>
+            <option value="10:30AM">10:30AM</option>
+            <option value="11:00AM">11:00AM</option>
+            <option value="11:30AM">11:30AM</option>
+          </select>
+  
+          <select class="form-select" name="End Time">
+            <option value="" selected disabled>End</option>
+            <option value="9:00PM">9:00PM</option>
+            <option value="9:30PM">9:30PM</option>
+            <option value="10:00PM">10:00PM</option>
+            <option value="10:30PM">10:30PM</option>
+          </select>
+          <button type="submit" id="schedule-btn">Add Schedule</button>
+        </div>
+  
+        <p>Facilities & Services</p>
+        <div class="hours-row">
+          <select class="form-select" name="Facilities">
+            <option value="" selected disabled>Select Facility</option>
+            <option value="Pet-Friendly">Pet-Friendly</option>
+            <option value="WiFi Included">WiFi Included</option>
+            <option value="Offers Delivery">Offers Delivery</option>
+          </select>
+        </div>
+  
+        <!-- Buttons Section -->
+        <p>By continuing, you agree to [COMPANY]'s <u>Terms of Service</u> and acknowledge our <u>Privacy Policy.</u></p>
+        <div class="button-container">
+          <button type="submit" class="submit-btn">Confirm Changes</button>
+          <button type="button" id="cancel">Cancel</button>
+        </div>
+      </form>
+    </div>
+  
+    <!-- Right Section: Avatar, Overview, Add Buttons -->
+    <div class="right-section">
+      <div class="logo-container">
+        <div class="logo"></div>
+        <p id="wordlogo">Change Logo 
+          <img id="pen" src="https://upload.wikimedia.org/wikipedia/commons/1/1a/Font_Awesome_5_solid_pen.svg" alt="Pen Icon">
+        </p>
+      </div>
+  
+      <p id="overview">Overview of Business</p>
+      <textarea class="form-description" name="Overview" placeholder="Short description of your business" required></textarea>
+  
+      <button type="submit" class="add-btn">Add Photos</button>
+      <button type="submit" class="add-btn">Add Menu</button>
+    </div>
+  </div>
+  
+
+</body>
+</html>
