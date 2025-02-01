@@ -137,7 +137,8 @@ body, html {
 .overall-review {
   justify-content: left;
   align-self: center;
-  padding-top: 1%;
+  margin-left: 4.8%;
+  margin-top: 1%;
 }
 
 .user-info {
@@ -158,7 +159,7 @@ body, html {
 }
 
 .date-time {
-  margin: 0;
+  margin: 0 4% 0 0;
 }
 
 .review-establishment, .review-text {
@@ -175,6 +176,7 @@ body, html {
 .review-footer {
   display: inline-block;
   text-align: center; 
+  margin-left: 5%;
 }
 
 .review-footer img {
@@ -200,7 +202,7 @@ body, html {
 
 .helpful, .unhelpful, .edit-post, .delete-post {
   display: inline-block;
-  margin: 0 0 10px 15px; 
+  margin-bottom: 5%;
   text-align: center; 
   border-radius: 50px;
   padding: 3px 10px;

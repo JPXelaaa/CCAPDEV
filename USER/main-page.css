@@ -266,6 +266,25 @@ nav {
   width: 25px;
 }
 
+footer {
+  display: flex;
+  justify-content: space-evenly;
+  background-color: rgb(194, 194, 194);
+  padding: 2%;
+}
+
+footer h3 {
+  text-align: center;
+}
+
+footer h6 {
+  margin: 10px;
+}
+
+.site-description, .group-names {
+  margin-top: 30px;
+}
+
 /* Media Queries for Smaller Screens */
 @media (max-width: 768px) {
   .nav-left,
