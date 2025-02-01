@@ -1,0 +1,390 @@
+/** STARTING PAGE **/
+body, html {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+  }
+
+body {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    overflow-y: auto;
+    font-family: Arial, sans-serif;
+  }
+  
+  h2 {
+    font-size: 27px;
+    font-weight: 600;
+  }
+  
+  h4 {
+    font-size: 16px;
+    font-weight: 600;
+  }
+  
+  /** NAVIGATION BAR **/
+  nav {
+    background-color: white;
+    display: flex;
+    justify-content: space-between;
+    padding: 5px;
+    flex-wrap: wrap; 
+    position: sticky; 
+    top: 0;          
+    z-index: 1000; 
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); 
+  }
+  
+  .nav-left,
+  .nav-center,
+  .nav-right {
+    align-items: center;
+    flex: 1; 
+    text-align: center;
+  }
+  
+  .nav-center, .nav-right {
+    display: flex;
+  }
+  
+  .nav-right {
+    padding: 15px;
+    justify-content: center;
+    margin: 0;
+  }
+
+  .nav-right a {
+    margin: 0 10px;
+    text-decoration: none;
+    color: inherit;
+  }
+  
+  #page-logo {
+    height: 60px;
+    margin: 0;
+  }
+
+  .profile-option {
+    height: 40px;
+    width: 40px;
+    border-radius: 50px;
+    background-color: black;
+    margin-left: 20px;
+  }
+  
+  /** LOGO AND RESTAURANT NAME**/
+  .profile-header, .image-cover {
+    overflow: visible;
+  }
+
+  .image-cover {
+    position: relative; 
+    width: 100%;
+    height: 30vh; 
+    display: flex;
+  }
+  
+  .image-cover img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; 
+  }
+    
+  .profile-header-inner {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 100%; 
+    height: 50%; 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    font-size: 18px;
+  }
+
+  .profile-header-picture {
+    margin-right: 2%
+  }
+  
+  .profile-header-picture img {
+    width: 130px;
+    height: 130px;
+    border-radius: 50%;
+    border-width: 2px;
+    border-style: solid;
+  }
+   
+  .profile-header-details {
+    margin-right: 5%;
+  }
+  
+  .profile-header-details h2 {
+    margin: 0;
+    color: black;
+  }
+
+  .edit-profile button {
+    padding: 10px 15px;
+    background-color: black;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+
+  #star-rating {
+    width: 30px;
+  }
+
+  #num-review {
+    margin-top: 10px;
+    color: black;
+  }
+  
+/** REVIEW SECTION **/
+
+  .profile-body {
+    display: grid;
+    grid-template-columns: 1fr 3fr 1fr;
+    background-color: antiquewhite;
+    flex: 1;
+  }
+  
+  .left-profile-body, .center-profile-body, .right-profile-body {
+    align-items: center;
+    padding: 15px;
+  }
+
+  /* header section for review */
+  .tags {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    align-items: flex-start;
+    }
+
+  .review-title {
+    font-size: 18px;
+    font-weight: bold;
+    margin-bottom: 1px;
+    margin-top: 10px;
+  }
+
+  .tag-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+  }
+
+  .rectangle {
+    background-color: black;
+    width: 150px;
+    height: 40px;
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    padding: 5px 10px;
+  }
+
+  #tag-text {
+    font-size: 14px;
+    color: white;
+    margin: 0;
+  }
+
+  #x-btn {
+    width: 15px;
+    height: 15px;
+    margin-left: auto;
+    margin-right: 10px;
+    cursor: pointer;
+  }
+
+  .sort {
+    display: flex;
+    flex-direction: row;
+  }
+
+  .filter {
+    display: flex;
+    flex-direction: row;
+  }
+
+  #sort-picture, #filter-picture {
+    width: 40px;
+    height: 40px;
+    margin-right: 10px;
+    margin-left: 20px;
+    align-self: center;
+  }
+
+  #sort-picture {
+    margin-left: 100px;
+  }
+
+  .sort-filter button {
+    padding: 10px 15px;
+    background-color: white;
+    color: black;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+
+  /* main section for reviews*/
+.recent-review {
+    border-width: 1px;
+    border-style: solid;
+    border-radius: 3%;
+    background-color: white;
+    margin: 3% 0;
+  }
+  
+  .review-header, .review-establishment {
+    display: flex;
+    justify-content: space-between; 
+    align-items: center; 
+    padding: 2%;
+  }
+  
+  #name-of-establishment {
+    margin: 0;
+  }
+  
+  .overall-review {
+    justify-content: left;
+    align-self: center;
+    margin-left: 4.8%;
+    margin-top: 1%;
+  }
+  
+  .user-info {
+    display: flex; 
+    align-items: center; 
+  }
+  
+  .profile-picture {
+    width: 40px; 
+    height: 40px;
+    border-radius: 50%; 
+    background-color: gray; 
+  }
+  
+  .username {
+    margin: 0;
+    margin-left: 10px; 
+  }
+  
+  .date-time {
+    margin: 0;
+  }
+  
+  .review-establishment, .review-text {
+    padding: 0% 5% 0% 5%;
+  }
+  
+  .review-photo {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    padding: 3%;
+    gap: 1%;
+  }
+  
+  .review-footer {
+    display: flex;
+    justify-content: flex-start; 
+    align-items: center;
+    margin-left: 5%;
+    margin-bottom: 10px;
+  }
+
+  .footer-content {
+    display: flex;
+    align-items: center; 
+    gap: 10px; 
+  }
+
+  .reply-text {
+    font-size: 16px;
+    color: black;
+    margin: 0;
+  }
+
+  #thumbs-up {
+    width: 40px;
+    height: 40px;
+  }
+  
+  .photos-div {
+    border-width: 2px;
+    border-color: rgb(0, 0, 0);
+    border-style: solid;
+    background-color: white;
+    border-radius: 5%;
+  }
+  
+  .right-header {
+    display: flex;
+    justify-content: space-between;
+    padding: 3%;
+  }
+  
+  .photos-section {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 1%;
+    margin-top: 2%;
+    margin-bottom: 2%;
+    color: gray;
+  }
+  
+  .photo-entry {
+    border-width: 2px;
+    border-color: gray;
+    border-style: solid;
+    border-radius: 5%;
+    overflow: hidden;
+  }
+  
+  .actual-photo {
+    width: 100%;
+    height: 100%;
+  }
+  
+  /* Navigation Arrows */
+.pages {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+}
+
+.page-number, .page-arrow {
+    text-decoration: none;
+    color: black;
+    padding: 8px 12px;
+    margin: 0 5px;
+    border: 1px solid black;
+    border-radius: 5px;
+    background-color: white;
+    font-weight: bold;
+}
+
+.page-number:hover, .page-arrow:hover {
+    background-color: #f0f0f0;
+}
+
+.active {
+    background-color: black;
+    color: white;
+}
+
+.dots {
+    padding: 8px 12px;
+    color: black;
+}
