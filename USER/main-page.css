@@ -267,22 +267,42 @@ nav {
 }
 
 footer {
-  display: flex;
-  justify-content: space-evenly;
-  background-color: rgb(194, 194, 194);
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  background-color: rgb(231, 230, 230);
   padding: 2%;
+  margin-top: 5%
+}
+
+.site-details, .group-members {
+  padding-left: 10%;
+}
+
+.developers {
+  padding-left: 35%;
+}
+
+.contact-detail {
+  display: flex;
+  align-items: center;
 }
 
 footer h3 {
-  text-align: center;
+  font-weight: 600;
+  margin-bottom: 10px;
 }
 
-footer h6 {
-  margin: 10px;
+.contact-detail h6 {
+  margin: 0;
 }
 
-.site-description, .group-names {
-  margin-top: 30px;
+.group-names h6, .site-description {
+  margin-top: 6%;
+}
+
+footer img {
+  width: 10%;
+  margin-right: 5%;
 }
 
 /* Media Queries for Smaller Screens */
