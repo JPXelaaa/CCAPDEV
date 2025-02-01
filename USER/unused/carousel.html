@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Carousel</title>
+    <link rel="stylesheet" href="starting-page.css">
+    <style>
+  body {
+  font-family: Arial, sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+  background-color: #f0f0f0;
+}
+
+.carousel-container {
+  position: relative;
+  width: 100%;  
+  overflow: hidden;
+  align-content: center;
+  justify-content: center;
+  padding-left: 3%;
+}
+
+.carousel {
+  display: flex;
+  transition: transform 1s ease-in-out;
+  width: max-content;
+}
+
+.establishment-preview {
+  width: 40vh; 
+  height: 50vh;
+  margin: 0 3vh; 
+  background-color: white;
+  transition: transform 1s ease; 
+  align-self: center;
+}
+
+.establishment-preview.active {
+  transform: scale(1.5); 
+  margin: 130px; 
+}
+
+.prev, .next {
+  position: absolute;
+  top: 50%;
+  width: 50px;
+  transform: translateY(-50%);
+  background-color: rgba(0, 0, 0, 0.5);
+  color: white;
+  border: none;
+  padding: 10px;
+  cursor: pointer;
+  font-size: 20px;
+  border-radius: 50%;
+  z-index: 1;
+}
+
+.prev {
+  left: 1%;
+}
+
+.next {
+  left: 96%;
+}
+
+.prev.hide, .next.hide {
+  display: none;
+}
+
+
+
+    </style>
+  
+  </head>
+<body>
+
+  <nav>
+    <div class="nav-left">
+      <img src="https://www.pngkey.com/png/full/529-5291672_png-image-no-background.png" id="page-logo">
+    </div>
+
+    <div class="nav-center"></div>
+
+    <div class="nav-right">
+      <button id="log-in">LOG IN</button>
+      <button id="sign-up">SIGN UP</button>
+    </div>
+  </nav>
+
+  <div class="change-display">
+    <h2>View Establishments</h2>
+    <ul class="pagination">
+      <li class="page-item"><a class="page-link" href="#"><img src="https://www.svgrepo.com/show/334512/carousel.svg"></a></li>
+      <li class="page-item"><a class="page-link" href="#"><img src="https://www.svgrepo.com/show/532952/grid.svg"></a></li>
+      <li class="page-item"><a class="page-link" href="#"><img src="https://www.svgrepo.com/show/532555/search.svg"></a></li>
+      <li class="page-item"><a class="page-link" href="#"><img src="https://www.svgrepo.com/show/532169/filter.svg"></a></li>
+    </ul>
+  </div>
+
+  <div class="main-page">
+
+  </div>
+  <div class="carousel-container">
+    <div class="carousel">
+
+      <div class="establishment-preview">
+        <div class="establishment-image">
+        <img src="https://thearchitectsdiary.com/wp-content/uploads/2020/01/Daler14.jpg">
+        </div>
+        <div class="establishment-logo">
+            <img src="https://static.vecteezy.com/system/resources/previews/011/883/295/original/modern-graphic-troly-colorful-logo-good-for-technology-logo-e-commerce-logo-online-shop-logo-company-logo-dummy-logo-bussiness-logo-free-vector.jpg">
+        </div>
+        <div class="preview-details">
+            <div class="establishment-name">
+                Establishment name
+            </div>
+            <div class="overall-review">
+                <img src="http://pluspng.com/img-png/star-png-star-vector-png-transparent-image-2000.png" class="rating">
+                <img src="http://pluspng.com/img-png/star-png-star-vector-png-transparent-image-2000.png" class="rating">
+                <img src="http://pluspng.com/img-png/star-png-star-vector-png-transparent-image-2000.png" class="rating">
+                <img src="http://pluspng.com/img-png/star-png-star-vector-png-transparent-image-2000.png" class="rating">
+                <img src="http://pluspng.com/img-png/star-png-star-empty-png-2000.png" class="rating">
+                <span><h2>(71)</h2></span>
+            </div>
+            <div class="establishment-description">
+                Establishment description
+                (three lines at most)
+            </div>
+        </div>  
+    </div>
+
+    <div class="establishment-preview">
+        <div class="establishment-image">
+        <img src="https://wallpaperaccess.com/full/3692914.jpg">
+        </div>
+        <div class="establishment-logo">
+            <img src="https://static.vecteezy.com/system/resources/previews/011/883/295/original/modern-graphic-troly-colorful-logo-good-for-technology-logo-e-commerce-logo-online-shop-logo-company-logo-dummy-logo-bussiness-logo-free-vector.jpg">
+        </div>
+        <div class="preview-details">
+            <div class="establishment-name">
+                Establishment name
+            </div>
+            <div class="overall-review">
+                <img src="http://pluspng.com/img-png/star-png-star-vector-png-transparent-image-2000.png" class="rating">
+                <img src="http://pluspng.com/img-png/star-png-star-vector-png-transparent-image-2000.png" class="rating">
+                <img src="http://pluspng.com/img-png/star-png-star-vector-png-transparent-image-2000.png" class="rating">
+                <img src="http://pluspng.com/img-png/star-png-star-vector-png-transparent-image-2000.png" class="rating">
+                <img src="http://pluspng.com/img-png/star-png-star-empty-png-2000.png" class="rating">
+                <span><h2>(71)</h2></span>
+            </div>
+            <div class="establishment-description">
+                Establishment description
+                (three lines at most)
+            </div>
+        </div>  
+    </div>
+
+    <div class="establishment-preview">
+        <div class="establishment-image">
+            <img src="https://uniquekiosk.com/wp-content/uploads/2020/04/2-4-2-2048x2048.jpg">
+        </div>
+        <div class="establishment-logo">
+            <img src="https://static.vecteezy.com/system/resources/previews/011/883/295/original/modern-graphic-troly-colorful-logo-good-for-technology-logo-e-commerce-logo-online-shop-logo-company-logo-dummy-logo-bussiness-logo-free-vector.jpg">
+        </div>
+        <div class="preview-details">
+            <div class="establishment-name">
+                Establishment name
+            </div>
+            <div class="overall-review">
+                <img src="http://pluspng.com/img-png/star-png-star-vector-png-transparent-image-2000.png" class="rating">
+                <img src="http://pluspng.com/img-png/star-png-star-vector-png-transparent-image-2000.png" class="rating">
+                <img src="http://pluspng.com/img-png/star-png-star-vector-png-transparent-image-2000.png" class="rating">
+                <img src="http://pluspng.com/img-png/star-png-star-vector-png-transparent-image-2000.png" class="rating">
+                <img src="http://pluspng.com/img-png/star-png-star-empty-png-2000.png" class="rating">
+                <span><h2>(71)</h2></span>
+            </div>
+            <div class="establishment-description">
+                Establishment description
+                (three lines at most)
+            </div>
+        </div>  
+    </div>
+    <div class="establishment-preview">
+        <div class="establishment-image">
+            <img src="https://www.maisonvalentina.net/en/inspiration-and-ideas/wp-content/uploads/2018/07/luxury_restaurants1.jpg">
+        </div>
+        <div class="establishment-logo">
+            <img src="https://static.vecteezy.com/system/resources/previews/011/883/295/original/modern-graphic-troly-colorful-logo-good-for-technology-logo-e-commerce-logo-online-shop-logo-company-logo-dummy-logo-bussiness-logo-free-vector.jpg">
+        </div>
+        <div class="preview-details">
+            <div class="establishment-name">
+                Establishment name
+            </div>
+            <div class="overall-review">
+                <img src="http://pluspng.com/img-png/star-png-star-vector-png-transparent-image-2000.png" class="rating">
+                <img src="http://pluspng.com/img-png/star-png-star-vector-png-transparent-image-2000.png" class="rating">
+                <img src="http://pluspng.com/img-png/star-png-star-vector-png-transparent-image-2000.png" class="rating">
+                <img src="http://pluspng.com/img-png/star-png-star-vector-png-transparent-image-2000.png" class="rating">
+                <img src="http://pluspng.com/img-png/star-png-star-empty-png-2000.png" class="rating">
+                <span><h2>(71)</h2></span>
+            </div>
+            <div class="establishment-description">
+                Establishment description
+                (three lines at most)
+            </div>
+        </div>  
+    </div>
+    <div class="establishment-preview">
+        <div class="establishment-image">
+            <img src="https://d2eohwa6gpdg50.cloudfront.net/wp-content/uploads/2019/10/29103100/Gaddis-LR-1920x1279.jpg">
+        </div>
+        <div class="establishment-logo">
+            <img src="https://static.vecteezy.com/system/resources/previews/011/883/295/original/modern-graphic-troly-colorful-logo-good-for-technology-logo-e-commerce-logo-online-shop-logo-company-logo-dummy-logo-bussiness-logo-free-vector.jpg">
+        </div>
+        <div class="preview-details">
+            <div class="establishment-name">
+                Establishment name
+            </div>
+            <div class="overall-review">
+                <img src="http://pluspng.com/img-png/star-png-star-vector-png-transparent-image-2000.png" class="rating">
+                <img src="http://pluspng.com/img-png/star-png-star-vector-png-transparent-image-2000.png" class="rating">
+                <img src="http://pluspng.com/img-png/star-png-star-vector-png-transparent-image-2000.png" class="rating">
+                <img src="http://pluspng.com/img-png/star-png-star-vector-png-transparent-image-2000.png" class="rating">
+                <img src="http://pluspng.com/img-png/star-png-star-empty-png-2000.png" class="rating">
+                <span><h2>(71)</h2></span>
+            </div>
+            <div class="establishment-description">
+                Establishment description
+                (three lines at most)
+            </div>
+        </div>  
+    </div>    
+  </div>
+
+  <div class="carousel-buttons">
+    <button class="prev" onclick="moveSlide(-1)">&#10094;</button>
+    <button class="next" onclick="moveSlide(1)">&#10095;</button>
+  </div>
+
+<script>
+  
+  let currentIndex = 0;
+
+function updateActiveItem() {
+  const items = document.querySelectorAll('.establishment-preview');
+  const leftButton = document.querySelector('.prev');
+  const rightButton = document.querySelector('.next');
+
+  items.forEach((item, index) => {
+    item.classList.remove('active');  // Remove active class from all items
+    if (index === currentIndex) {
+      item.classList.add('active');  // Add active class to the current item
+    }
+  });
+
+  if (currentIndex == 0) {
+    leftButton.classList.add('hide');
+  } else {
+    leftButton.classList.remove('hide');
+  }
+
+  if (currentIndex == 4) {
+    rightButton.classList.add('hide');
+  } else {
+    rightButton.classList.remove('hide');
+  }
+}
+
+function moveSlide(direction) {
+  const carousel = document.querySelector('.carousel');
+  const items = document.querySelectorAll('.establishment-preview');
+  const totalItems = items.length;
+
+  currentIndex = (currentIndex + direction) % totalItems;  
+  
+  updateActiveItem();
+
+  const offset = -(currentIndex * (window.innerWidth * 0.22)); 
+  carousel.style.transform = `translateX(${offset}px)`;
+}
+
+updateActiveItem();
+
+
+</script>
+  
+  </body>
+</html>
