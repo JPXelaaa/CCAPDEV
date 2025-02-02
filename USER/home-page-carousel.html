@@ -29,11 +29,12 @@
       transition: transform 1s ease-in-out;
       width: 100%;
       overflow: hidden;
-      margin-left: 26%;
+      margin-left: 21%;
+      padding: 0 3%;
     }
     
     .establishment-preview {
-      width: 40vh; 
+      width: 45vh; 
       height: 45vh;
       margin: 0 3vh; 
       background-color: white;
@@ -66,7 +67,7 @@
     }
     
     .next {
-      left: 70%;
+      left: 60%;
     }
     
     .prev.hide, .next.hide {
@@ -380,7 +381,7 @@
       
       updateActiveItem();
     
-      const offset = -(currentIndex * (window.innerWidth * 0.1885)); 
+      const offset = -(currentIndex * (window.innerWidth * 0.195)); 
       carousel.style.transform = `translateX(${offset}px)`;
     }
     
