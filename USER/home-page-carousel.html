@@ -23,14 +23,17 @@
       </div>
 
       <div class="nav-right">
-				<h4><a href="#">Home</a></h4> <!-- bring to home-page-carousel-->
-				<h4><a href="own-user-profile-review.html">Profile</a></h4> <!-- bring to own-user-profile-review-->
+				<h4><a href="home-page-carousel.html">Home</a></h4>
+				<h4><a href="own-user-profile-review.html">Profile</a></h4>
         <div class="profile-container">
           <div class="profile-option" onclick="toggleLogOut()">
           </div>
           <div id="dropdownLogOut" class="absolute top-12 right-0 bg-white shadow-lg border rounded-md z-50 hidden">
               <ul>
-                <li class="p-2 hover:bg-gray-100 cursor-pointer">Log out</li> <!-- bring to starting-page-carousel-->
+                <li class="p-2 hover:bg-gray-100 cursor-pointer"><a href="starting-page-carousel.html">Log out
+
+                </a>
+              </li>
             </div>
         </div>
         
@@ -74,7 +77,7 @@
                 </div>
                 <div class="preview-details">
                     <div class="establishment-name">
-                        Establishment name
+                        The Rustic Fork
                     </div>
                     <div class="overall-review">
                         <img src="http://pluspng.com/img-png/star-png-star-vector-png-transparent-image-2000.png" class="rating">
@@ -85,8 +88,7 @@
                         <span><h2>(71)</h2></span>
                     </div>
                     <div class="establishment-description">
-                        Establishment description
-                        (three lines at most)
+                      A cozy bistro offering farm-to-table dishes. </br>                       
                     </div>
                 </div>  
             </div>
@@ -100,7 +102,7 @@
                 </div>
                 <div class="preview-details">
                     <div class="establishment-name">
-                        Establishment name
+                        Sizzle & Smoke
                     </div>
                     <div class="overall-review">
                         <img src="http://pluspng.com/img-png/star-png-star-vector-png-transparent-image-2000.png" class="rating">
@@ -111,8 +113,7 @@
                         <span><h2>(71)</h2></span>
                     </div>
                     <div class="establishment-description">
-                        Establishment description
-                        (three lines at most)
+                        A steakhouse with premium cuts and smoky flavors. </br>
                     </div>
                 </div>  
             </div>
@@ -126,7 +127,7 @@
                 </div>
                 <div class="preview-details">
                     <div class="establishment-name">
-                        Establishment name
+                        Casa Del Mar
                     </div>
                     <div class="overall-review">
                         <img src="http://pluspng.com/img-png/star-png-star-vector-png-transparent-image-2000.png" class="rating">
@@ -137,8 +138,7 @@
                         <span><h2>(71)</h2></span>
                     </div>
                     <div class="establishment-description">
-                        Establishment description
-                        (three lines at most)
+                        Authentic Mediterranean seafood with ocean views. </br>
                     </div>
                 </div>  
             </div>
@@ -151,7 +151,7 @@
                 </div>
                 <div class="preview-details">
                     <div class="establishment-name">
-                        Establishment name
+                        Golden Lotus
                     </div>
                     <div class="overall-review">
                         <img src="http://pluspng.com/img-png/star-png-star-vector-png-transparent-image-2000.png" class="rating">
@@ -162,8 +162,7 @@
                         <span><h2>(71)</h2></span>
                     </div>
                     <div class="establishment-description">
-                        Establishment description
-                        (three lines at most)
+                        A modern twist on classic Asian cuisine. </br>
                     </div>
                 </div>  
             </div>
@@ -176,7 +175,7 @@
                 </div>
                 <div class="preview-details">
                     <div class="establishment-name">
-                        Establishment name
+                       Harvest Table
                     </div>
                     <div class="overall-review">
                         <img src="http://pluspng.com/img-png/star-png-star-vector-png-transparent-image-2000.png" class="rating">
@@ -187,8 +186,7 @@
                         <span><h2>(71)</h2></span>
                     </div>
                     <div class="establishment-description">
-                        Establishment description
-                        (three lines at most)
+                      Vegan-friendly dishes bursting with organic goodness. </br>
                     </div>
                 </div>  
             </div>
@@ -201,7 +199,7 @@
                 </div>
                 <div class="preview-details">
                     <div class="establishment-name">
-                        Establishment name
+                      Pasta E Basta
                     </div>
                     <div class="overall-review">
                         <img src="http://pluspng.com/img-png/star-png-star-vector-png-transparent-image-2000.png" class="rating">
@@ -212,8 +210,7 @@
                         <span><h2>(71)</h2></span>
                     </div>
                     <div class="establishment-description">
-                        Establishment description
-                        (three lines at most)
+                        Traditional Italian pasta made fresh daily. </br>
                     </div>
                 </div>  
               </div>
@@ -273,16 +270,38 @@
           </div>
           <div class="contact-detail">
             <img src="https://www.svgrepo.com/show/511921/email-1573.svg">
-            <h6>trish_ann_aguarin@dlsu.edu.ph</h6>
+            <h6>dencel_pineda@dlsu.edu.ph</h6>
           </div>
           <div class="contact-detail">
             <img src="https://www.svgrepo.com/show/511921/email-1573.svg">
-            <h6>trish_ann_aguarin@dlsu.edu.ph</h6>
+            <h6>jan_quijano@dlsu.edu.ph</h6>
           </div>
         </div>
       </div>
     </footer>
     <script src="home-page.js"></script>
-
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        document.body.classList.add("fade-in"); // Ensure page fades in on load
+  
+        const links = document.querySelectorAll("a");
+  
+        links.forEach(link => {
+          if (link.getAttribute("href") && !link.getAttribute("href").startsWith("#")) {
+            link.addEventListener("click", function (event) {
+              event.preventDefault();
+              const targetUrl = this.href;
+  
+              document.body.classList.add("fade-out"); // Apply fade-out effect
+  
+              setTimeout(() => {
+                window.location.href = targetUrl;
+              }, 500); // Delay must match CSS transition time
+            });
+          }
+        });
+      });
+    </script>
+      
   </body>
 </html>

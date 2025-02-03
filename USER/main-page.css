@@ -158,7 +158,8 @@ nav {
 
 .establishment-description {
   padding: 15px;
-  font-size: 1rem;
+  font-size: 14px;
+  padding-top: 0px;
   height: fit-content;
 }
 
@@ -289,4 +290,20 @@ footer h3 {
 footer img {
   width: 10%;
   margin-right: 5%;
+}
+
+
+.fade-in {
+  opacity: 0;
+  animation: fadeIn 0.5s ease-in forwards;
+}
+
+.fade-out {
+  opacity: 0;
+  pointer-events: none; /* Prevents extra clicks during fade-out */
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
 }
