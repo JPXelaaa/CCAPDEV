@@ -1,0 +1,137 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f8f8f8;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    padding: 10px;
+    background-color: white;
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.search-bar input {
+    padding: 5px;
+    width: 200px;
+}
+
+
+
+
+
+.restaurant-info {
+    margin: 1em 10em 2em 10em;
+    height: fit-content;
+
+    border: black;
+    border-style: solid;
+
+
+    justify-content: left;
+    display: flex;
+    flex-direction: row;
+}
+
+.restaurant-logo {
+    width: 100px;
+    height: 100px;
+    background-color: gray;
+    border-radius: 10px;
+
+    border: black;
+    border-style: solid;
+}
+
+#restaurant-info-name{
+    height: fit-content;
+    width: fit-content;
+    margin: 10px 0 0 10px;
+
+    border:#04AA6D;
+    border-style: solid;
+}
+
+#restaurant-info-content-outer{
+    border: red;
+    border-style: solid;
+
+    height: inherit;
+    width: inherit;
+
+    display: inherit;
+    flex-direction: column;
+}
+
+#restaurant-info-content-inner{
+    margin: 0 0 0 10px;
+    border: blue;
+    border-style: solid;
+
+    height: inherit;
+    width: inherit;
+    
+    display: inherit;
+    flex-direction: row;
+}
+
+#restaurant-rating{
+    height: 40px;
+    width: 150px;
+}
+
+
+
+
+.reviews {
+    width: 80%;
+    margin: auto;
+}
+
+.review {
+    background-color: white;
+    padding: 15px;
+    margin-bottom: 10px;
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+    border-radius: 5px;
+}
+
+.review-images img {
+    width: 100px;
+    height: 100px;
+    margin-right: 5px;
+    border-radius: 5px;
+}
+
+.page {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.page button {
+    margin: 0 5px;
+    padding: 5px 10px;
+    border: none;
+    cursor: pointer;
+    background-color: #ddd;
+}
+
+.page .active {
+    background-color: black;
+    color: white;
+}
+
+.helpful {
+    background-color: #04AA6D; /* Green */
+    color: white;
+    text-align: center;
+    font-size: 15px;
+}
+
+.total-stars {
+    width: 100px;
+    height: 60px;
+}
