@@ -35,22 +35,24 @@ body {
     z-index: 1000; 
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); 
   }
-  
-  .nav-left,
-  .nav-center,
-  .nav-right {
+
+  .nav-left, .nav-center, .nav-right {
     align-items: center;
     flex: 1; 
     text-align: center;
   }
-  
-  .nav-center, .nav-right {
-    display: flex;
-  }
-  
+
   .nav-right {
     padding: 15px;
     justify-content: center;
+  }
+
+  .nav-center, .nav-right {
+    display: flex;
+    align-items: center;
+  }
+
+  .nav-right h4 {
     margin: 0;
   }
 
@@ -59,11 +61,6 @@ body {
     text-decoration: none;
     color: inherit;
   }
-  
-  #page-logo {
-    height: 60px;
-    margin: 0;
-  }
 
   .profile-option {
     height: 40px;
@@ -71,6 +68,19 @@ body {
     border-radius: 50px;
     background-color: black;
     margin-left: 20px;
+  }
+
+  #page-logo {
+    height: 60px;
+    margin: 0;
+    margin-left: 30%;
+  }
+
+  .content-row {
+    display: flex;
+    justify-content: space-between; 
+    align-items: flex-start;
+    margin: 20px;
   }
 
   .search-bar {
@@ -137,6 +147,8 @@ body {
     border-radius: 20px;
     align-items: center;
     padding: 10px 15px;
+    background-color: grey;
+    margin-top: 50px;
 
   }
   
@@ -381,6 +393,8 @@ body {
 
 .overall-review {
     justify-content: left;
+    display: flex;
+    flex-direction: row;
   }
 
 .user-info {
@@ -396,7 +410,6 @@ body {
 }
 
 .username {
-    margin-left: 10px;
     font-weight: bold;
 }
 
