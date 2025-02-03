@@ -24,54 +24,65 @@ body {
   }
   
   /** NAVIGATION BAR **/
-  nav {
-    background-color: white;
-    display: flex;
-    justify-content: space-between;
-    padding: 5px;
-    flex-wrap: wrap; 
-    position: sticky; 
-    top: 0;          
-    z-index: 1000; 
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); 
-  }
-  
-  .nav-left,
-  .nav-center,
-  .nav-right {
-    align-items: center;
-    flex: 1; 
-    text-align: center;
-  }
-  
-  .nav-center, .nav-right {
-    display: flex;
-  }
-  
-  .nav-right {
-    padding: 15px;
-    justify-content: center;
-    margin: 0;
-  }
+   /* Navigation Bar */
+nav {
+  background-color: white;
+  display: flex;
+  justify-content: space-between;
+  padding: 5px;
+  flex-wrap: wrap; 
+  position: sticky; 
+  top: 0;          
+  z-index: 1000; 
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); 
+}
 
-  .nav-right a {
-    margin: 0 10px;
-    text-decoration: none;
-    color: inherit;
-  }
-  
-  #page-logo {
-    height: 60px;
-    margin: 0;
-  }
+.nav-left, .nav-center, .nav-right {
+  align-items: center;
+  flex: 1; 
+  text-align: center;
+}
 
-  .profile-option {
-    height: 40px;
-    width: 40px;
-    border-radius: 50px;
-    background-color: black;
-    margin-left: 20px;
-  }
+.nav-right {
+  padding: 15px;
+  justify-content: center;
+}
+
+.nav-center, .nav-right {
+  display: flex;
+  align-items: center;
+}
+
+.nav-right h4 {
+  margin: 0;
+}
+
+.nav-right a {
+  margin: 0 10px;
+  text-decoration: none;
+  color: inherit;
+}
+
+.profile-option {
+  height: 40px;
+  width: 40px;
+  border-radius: 50px;
+  background-color: black;
+  margin-left: 20px;
+}
+
+#page-logo {
+  height: 60px;
+  margin: 0;
+  margin-left: 30%;
+}
+
+.content-row {
+  display: flex;
+  justify-content: space-between; 
+  align-items: flex-start;
+  margin: 20px;
+}
   
   /** LOGO AND RESTAURANT NAME**/
   .profile-header, .image-cover {
@@ -133,6 +144,11 @@ body {
     border: none;
     border-radius: 5px;
     cursor: pointer;
+  }
+
+  .overall-rating {
+    display: flex;
+    flex-direction: row;
   }
 
   #star-rating {
