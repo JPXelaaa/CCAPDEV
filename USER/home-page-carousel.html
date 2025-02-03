@@ -9,74 +9,7 @@
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="main-page.css">
     <link rel="stylesheet" href="home-page.css">
-
-    <style>
-    
-    html, body {
-        overflow-x: hidden;
-    }
-    
-    .left-main {
-      position: relative;
-      width: max-content;  
-      overflow: hidden;
-      align-content: center;
-      justify-content: center;
-    }
-    
-    .main-section {
-      display: flex;
-      transition: transform 1s ease-in-out;
-      width: 100%;
-      overflow: hidden;
-      margin-left: 21%;
-      padding: 0 3%;
-    }
-    
-    .establishment-preview {
-      width: 45vh; 
-      height: 45vh;
-      margin: 0 3vh; 
-      background-color: white;
-      transition: transform 1s ease; 
-      align-self: center;
-    }
-    
-    .establishment-preview.active {
-      transform: scale(1.5); 
-      margin: 5% 
-    }
-
-    .prev, .next {
-      position: absolute;
-      top: 50%;
-      width: 50px;
-      transform: translateY(-50%);
-      background-color: rgba(0, 0, 0, 0.5);
-      color: white;
-      border: none;
-      padding: 10px;
-      cursor: pointer;
-      font-size: 20px;
-      border-radius: 50%;
-      z-index: 1;
-    }
-    
-    .prev {
-      left: 5%;
-    }
-    
-    .next {
-      left: 60%;
-    }
-    
-    .prev.hide, .next.hide {
-      display: none;
-    }
-    
-    
-    
-    </style>
+    <link rel="stylesheet" href="carousel.css">
 
   </head>
 
@@ -92,8 +25,16 @@
       <div class="nav-right">
 				<h4><a href="#">Home</a></h4>
 				<h4><a href="user-profile-reviews.html">Profile</a></h4>
-        <div class="profile-option">
+        <div class="profile-container">
+          <div class="profile-option" onclick="toggleLogOut()">
+          </div>
+          <div id="dropdownLogOut" class="absolute top-12 right-0 bg-white shadow-lg border rounded-md z-50 hidden">
+              <ul>
+                <li class="p-2 hover:bg-gray-100 cursor-pointer">Log out</li>
+              </ul>
+            </div>
         </div>
+        
       </div>
     </nav>
 
@@ -342,82 +283,7 @@
         </div>
       </div>
     </footer>
-
-    <script>
-  
-      let currentIndex = 0;
-    
-    function updateActiveItem() {
-      const items = document.querySelectorAll('.establishment-preview');
-      const leftButton = document.querySelector('.prev');
-      const rightButton = document.querySelector('.next');
-    
-      items.forEach((item, index) => {
-        item.classList.remove('active');  // Remove active class from all items
-        if (index === currentIndex) {
-          item.classList.add('active');  // Add active class to the current item
-        }
-      });
-    
-      if (currentIndex == 0) {
-        leftButton.classList.add('hide');
-      } else {
-        leftButton.classList.remove('hide');
-      }
-    
-      if (currentIndex == 5) {
-        rightButton.classList.add('hide');
-      } else {
-        rightButton.classList.remove('hide');
-      }
-    }
-    
-    function moveSlide(direction) {
-      const carousel = document.querySelector('.main-section');
-      const items = document.querySelectorAll('.establishment-preview');
-      const totalItems = items.length;
-    
-      currentIndex = (currentIndex + direction) % totalItems;  
-      
-      updateActiveItem();
-    
-      const offset = -(currentIndex * (window.innerWidth * 0.195)); 
-      carousel.style.transform = `translateX(${offset}px)`;
-    }
-    
-    updateActiveItem();
-
-        document.addEventListener("DOMContentLoaded", function () {
-          const searchIcon = document.querySelector('.pagination .page-item:nth-child(3) .page-link'); 
-          const filterIcon = document.querySelector('.pagination .page-item:nth-child(4) .page-link'); 
-          const searchBarContainer = document.getElementById("searchBarContainer");
-          const dropdownMenu = document.getElementById("dropdownMenu");
-      
-          searchIcon.addEventListener("click", function (event) {
-            event.preventDefault(); 
-            searchBarContainer.classList.toggle("hidden");
-          });
-      
-          filterIcon.addEventListener("click", function (event) {
-            event.preventDefault();
-            dropdownMenu.classList.toggle("hidden");
-          });
-      
-          document.addEventListener("click", function (event) {
-            if (!searchIcon.contains(event.target) && !searchBarContainer.contains(event.target)) {
-              searchBarContainer.classList.add("hidden");
-            }
-      
-            if (!filterIcon.contains(event.target) && !dropdownMenu.contains(event.target)) {
-              dropdownMenu.classList.add("hidden");
-            }
-          });
-        });
-
-    
-    
-    </script>
-
+    <script src="home-page.js"></script>
 
   </body>
 </html>

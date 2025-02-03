@@ -174,9 +174,10 @@ body, html {
 }
 
 .review-footer {
-  display: inline-block;
+  display: flex;
   text-align: center; 
   margin-left: 5%;
+  gap: 2%;
 }
 
 .review-footer img {
@@ -201,11 +202,13 @@ body, html {
 }
 
 .helpful, .unhelpful, .edit-post, .delete-post {
-  display: inline-block;
+  display: flex;
   margin-bottom: 5%;
   text-align: center; 
   border-radius: 50px;
   padding: 3px 10px;
+  width: 140px;
+  gap: 7%;
 }
 
 .helpful:hover, .unhelpful:hover, .edit-post:hover, .delete-post:hover  {

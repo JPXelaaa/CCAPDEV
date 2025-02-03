@@ -257,6 +257,7 @@ body {
   }
   
   .overall-review {
+    display: flex;
     justify-content: left;
     align-self: center;
     margin-left: 4.8%;

@@ -23,8 +23,16 @@
       <div class="nav-right">
 				<h4><a href="#">Home</a></h4>
 				<h4><a href="user-profile-reviews.html">Profile</a></h4>
-        <div class="profile-option">
+        <div class="profile-container">
+          <div class="profile-option" onclick="toggleLogOut()">
+          </div>
+          <div id="dropdownLogOut" class="absolute top-12 right-0 bg-white shadow-lg border rounded-md z-50 hidden">
+              <ul>
+                <li class="p-2 hover:bg-gray-100 cursor-pointer">Log out</li>
+              </ul>
+            </div>
         </div>
+        
       </div>
     </nav>
 
@@ -287,35 +295,35 @@
         </div>
       </footer>
 
-      
-      <script>
-          document.addEventListener("DOMContentLoaded", function () {
-            const searchIcon = document.querySelector('.pagination .page-item:nth-child(3) .page-link'); 
-            const filterIcon = document.querySelector('.pagination .page-item:nth-child(4) .page-link'); 
-            const searchBarContainer = document.getElementById("searchBarContainer");
-            const dropdownMenu = document.getElementById("dropdownMenu");
-        
-            searchIcon.addEventListener("click", function (event) {
-              event.preventDefault(); 
-              searchBarContainer.classList.toggle("hidden");
-            });
-        
-            filterIcon.addEventListener("click", function (event) {
-              event.preventDefault();
-              dropdownMenu.classList.toggle("hidden");
-            });
-        
-            document.addEventListener("click", function (event) {
-              if (!searchIcon.contains(event.target) && !searchBarContainer.contains(event.target)) {
-                searchBarContainer.classList.add("hidden");
-              }
-        
-              if (!filterIcon.contains(event.target) && !dropdownMenu.contains(event.target)) {
-                dropdownMenu.classList.add("hidden");
-              }
-            });
-          });
-        </script>
+      <script src="home-page.js"></script>
 
+      <script> // for some reason it doesnt work if not written in this file
+        document.addEventListener("DOMContentLoaded", function () {
+        const searchIcon = document.querySelector('.pagination .page-item:nth-child(3) .page-link'); 
+        const filterIcon = document.querySelector('.pagination .page-item:nth-child(4) .page-link'); 
+        const searchBarContainer = document.getElementById("searchBarContainer");
+        const dropdownMenu = document.getElementById("dropdownMenu");
+
+        searchIcon.addEventListener("click", function (event) {
+          event.preventDefault(); 
+          searchBarContainer.classList.toggle("hidden");
+        });
+
+        filterIcon.addEventListener("click", function (event) {
+          event.preventDefault();
+          dropdownMenu.classList.toggle("hidden");
+        });
+
+        document.addEventListener("click", function (event) {
+          if (!searchIcon.contains(event.target) && !searchBarContainer.contains(event.target)) {
+            searchBarContainer.classList.add("hidden");
+          }
+
+          if (!filterIcon.contains(event.target) && !dropdownMenu.contains(event.target)) {
+            dropdownMenu.classList.add("hidden");
+          }
+        });
+      });
+      </script>
   </body>
 </html>

@@ -111,6 +111,7 @@ nav {
   display: flex;
   flex-direction: column;
   overflow: hidden;
+  box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.2);
 }
 
 /* Establishment Image */
@@ -161,12 +162,6 @@ nav {
   height: fit-content;
 }
 
-@media (max-width: 768px) {
-  .establishment-description {
-    height: 70px;
-  }
-}
-
 /* Review Section */
 .overall-review {
   display: flex;
@@ -196,15 +191,6 @@ nav {
   height: fit-content;
   margin-right: 30%;
   border-radius: 5px;
-}
-
-/* Move Down on Smaller Screens */
-@media (max-width: 768px) {
-  .filter-option {
-    margin-right: 0; 
-    margin-top: 10px; 
-    justify-self: center; 
-  }
 }
 
 
@@ -303,49 +289,4 @@ footer h3 {
 footer img {
   width: 10%;
   margin-right: 5%;
-}
-
-/* Media Queries for Smaller Screens */
-@media (max-width: 768px) {
-  .nav-left,
-  .nav-center,
-  .nav-right {
-    text-align: center;
-  }
-
-  .preview-label {
-    font-size: 1.25rem;
-    margin-left: 0;
-  }
-
-  .search-container {
-    width: 100%;
-    padding: 0 10px;
-  }
-
-  .filter-option {
-    width: 90%;
-  }
-
-  .main-section {
-    padding: 10px;
-  }
-}
-
-@media (max-width: 480px) {
-  .search-bar {
-    font-size: 0.9rem;
-  }
-
-  .preview-label {
-    font-size: 1rem;
-  }
-
-  .establishment-name {
-    font-size: 1.25rem;
-  }
-
-  .overall-review span h2 {
-    font-size: 1rem;
-  }
 }

@@ -4,27 +4,36 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Edit Review</title>
+    <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="make-a-review.css">
     <link rel="stylesheet" href="edit-a-review.css">
+    <link rel="stylesheet" href="home-page.css">
   </head>
 
   <body>
     <nav>
-        <div class="nav-left">
-          <img src="https://www.pngkey.com/png/full/529-5291672_png-image-no-background.png" id="page-logo">
-        </div>
-  
-        <div class="nav-center">
-        </div>
-  
-        <div class="nav-right">
-                  <h4><a href="#">Home</a></h4>
-                  <h4><a href="user-profile-reviews.html">Profile</a></h4>
-          <div class="profile-option">
+      <div class="nav-left">
+        <img src="https://www.pngkey.com/png/full/529-5291672_png-image-no-background.png" id="page-logo">
+      </div>
+
+      <div class="nav-center">
+      </div>
+
+      <div class="nav-right">
+				<h4><a href="#">Home</a></h4>
+				<h4><a href="user-profile-reviews.html">Profile</a></h4>
+        <div class="profile-container">
+          <div class="profile-option" onclick="toggleLogOut()">
           </div>
+          <div id="dropdownLogOut" class="absolute top-12 right-0 bg-white shadow-lg border rounded-md z-50 hidden">
+              <ul>
+                <li class="p-2 hover:bg-gray-100 cursor-pointer">Log out</li>
+              </ul>
+            </div>
         </div>
-      </nav>
-    
+        
+      </div>
+    </nav>
     <!--Restaurant Information-->
     <div class="restaurant">
         <div class="logo"></div>
@@ -70,7 +79,7 @@
         <button type="submit" id="post-review-btn">Update Review</button>
       </div>
     
-
+      <script src="home-page.js"></script>
   </body>
 
   
