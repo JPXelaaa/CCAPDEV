@@ -3,31 +3,43 @@
   <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Login Pop-up</title>
+    <title>Establishment View</title>
 
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
 
     <link rel="stylesheet" href="establishment-view.css">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="home-page.css">
+
   </head>
 
   <body>
     <!--Navigation Bar-->
     <nav>
         <div class="nav-left">
-            <img src="https://www.pngkey.com/png/full/529-5291672_png-image-no-background.png" id="page-logo">
+          <img src="https://www.pngkey.com/png/full/529-5291672_png-image-no-background.png" id="page-logo">
         </div>
-
+    
         <div class="nav-center">
             <input type="text" placeholder="Search for more establishments..." class="search-bar">
-          </div>
-
-        <div class="nav-right">
-		    <h4><a href="home-page.html">Home</a></h4>
-		    <h4><a href="#">Profile</a></h4>
-            <div class="profile-option"></div>
         </div>
-    </nav>
+    
+        <div class="nav-right">
+          <h4><a href="#">Home</a></h4>
+          <h4><a href="user-profile-reviews.html">Profile</a></h4>
+          <div class="profile-container">
+            <div class="profile-option" onclick="toggleLogOut()">
+            </div>
+            <div id="dropdownLogOut" class="absolute top-12 right-0 bg-white shadow-lg border rounded-md z-50 hidden">
+                <ul>
+                  <li class="p-2 hover:bg-gray-100 cursor-pointer">Log out</li>
+                </ul>
+              </div>
+          </div>
+          
+        </div>
+      </nav>
 
     <!-- TOP HALF -->
     <div class="top-half">
@@ -340,6 +352,6 @@
     });
 
     </script>
-    
+    <script src="home-page.js"></script>
   </body>
 </html>
