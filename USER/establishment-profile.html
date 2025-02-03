@@ -3,28 +3,40 @@
   <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Login Pop-up</title>
+    <title>Establishment Profile</title>
 
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
     <link rel="stylesheet" href="establishment-profile.css">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="home-page.css">
+
   </head>
 
   <body>
     <!--Navigation Bar-->
     <nav>
         <div class="nav-left">
-            <img src="https://www.pngkey.com/png/full/529-5291672_png-image-no-background.png" id="page-logo">
+          <img src="https://www.pngkey.com/png/full/529-5291672_png-image-no-background.png" id="page-logo">
         </div>
-
+    
         <div class="nav-center"></div>
-
+    
         <div class="nav-right">
-		    <h4><a href="home-page.html">Home</a></h4>
-		    <h4><a href="#">Profile</a></h4>
-            <div class="profile-option"></div>
+          <h4><a href="#">Home</a></h4>
+          <h4><a href="user-profile-reviews.html">Profile</a></h4>
+          <div class="profile-container">
+            <div class="profile-option" onclick="toggleLogOut()">
+            </div>
+            <div id="dropdownLogOut" class="absolute top-12 right-0 bg-white shadow-lg border rounded-md z-50 hidden">
+                <ul>
+                  <li class="p-2 hover:bg-gray-100 cursor-pointer">Log out</li>
+                </ul>
+              </div>
+          </div>
+          
         </div>
-    </nav>
+      </nav>
 
     <!-- Logo and Restaurant Name-->
     <div class="profile-header">
@@ -37,11 +49,13 @@
                 <div class="profile-header-details">
                     <div>
                         <h2> Establishment Name </h2>
-                        <img id="star-rating" src="https://www.svgrepo.com/show/418551/star-rating.svg" alt="star rating">
-                        <img id="star-rating" src="https://www.svgrepo.com/show/418551/star-rating.svg" alt="star rating">
-                        <img id="star-rating" src="https://www.svgrepo.com/show/418551/star-rating.svg" alt="star rating">
-                        <img id="star-rating" src="https://www.svgrepo.com/show/418551/star-rating.svg" alt="star rating">
-                        <img id="star-rating" src="https://www.svgrepo.com/show/418551/star-rating.svg" alt="star rating">
+                        <div class="overall-rating">
+                            <img id="star-rating" src="https://www.svgrepo.com/show/418551/star-rating.svg" alt="star rating">
+                            <img id="star-rating" src="https://www.svgrepo.com/show/418551/star-rating.svg" alt="star rating">
+                            <img id="star-rating" src="https://www.svgrepo.com/show/418551/star-rating.svg" alt="star rating">
+                            <img id="star-rating" src="https://www.svgrepo.com/show/418551/star-rating.svg" alt="star rating">
+                            <img id="star-rating" src="https://www.svgrepo.com/show/418551/star-rating.svg" alt="star rating">
+                        </div>
                         <p id="num-review"> 4.7 stars (100 reviews) </p>
                     </div>
                 </div>
@@ -218,6 +232,6 @@
         
         <div class="right-profile-body"></div>
     </div>
-    
+    <script src="home-page.js"></script>
   </body>
 </html>
