@@ -4,26 +4,31 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Edit Review</title>
-    <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="make-a-review.css">
     <link rel="stylesheet" href="edit-a-review.css">
+    <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="home-page.css">
+
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap" rel="stylesheet">
+
   </head>
 
   <body>
     <nav>
       <div class="nav-left">
-        <img src="https://www.pngkey.com/png/full/529-5291672_png-image-no-background.png" id="page-logo">
+        <img src="/Resources/BiteRate.png" id="page-logo">
       </div>
 
       <div class="nav-center">
       </div>
 
       <div class="nav-right">
-				<h4><a href="home-page-carousel.html">Home</a></h4>
-				<h4><a href="user-profile-reviews.html">Profile</a></h4>
+				<h2 style="font-size: 18px; font-weight: 300;"><a href="home-page-carousel.html">Home</a></h4>
+				<h2 style="font-size: 18px; font-weight: 300;"><a href="own-user-profile-review.html">Profile</a></h4>
         <div class="profile-container">
           <div class="profile-option" onclick="toggleLogOut()">
+            <img src="https://i.pinimg.com/originals/6d/8b/9b/6d8b9b45c14da6fbfd09a7ede56b4a83.jpg">
           </div>
           <div id="dropdownLogOut" class="absolute top-12 right-0 bg-white shadow-lg border rounded-md z-50 hidden">
               <ul>
@@ -34,52 +39,51 @@
         
       </div>
     </nav>
-    <!--Restaurant Information-->
-    <div class="restaurant">
-        <div class="logo"></div>
-        <p class="resto-name"> RESTAURANT NAME</p>
-    </div>
-
-    <p id="instruction"> Tell us about your experience </p>
-
-    <!--Review part-->
-    <div class="review-box">
     
-        <div class="overall-review">
-            <img src="http://pluspng.com/img-png/star-png-star-vector-png-transparent-image-2000.png" class="rating">
-            <img src="http://pluspng.com/img-png/star-png-star-vector-png-transparent-image-2000.png" class="rating">
-            <img src="http://pluspng.com/img-png/star-png-star-vector-png-transparent-image-2000.png" class="rating">
-            <img src="http://pluspng.com/img-png/star-png-star-vector-png-transparent-image-2000.png" class="rating">
-            <img src="http://pluspng.com/img-png/star-png-star-empty-png-2000.png" class="rating">
-            <p> Edit your rating</p>
-        </div>
-    
-        <div class="review-text">
-            <textarea placeholder="Write your review here...">Hello! I loved the food wooow yeeeasasasa!!!Hello! I loved the food wooow yeeeasasasa!!!Hello! I loved the food wooow yeeeasasasa!!!Hello! I loved the food wooow yeeeasasasa!!!Hello! I loved the food wooow yeeeasasasa!!!</textarea>
-        </div>
-    
-        <!-- Review Photo Section -->
-        <div class="review-photo">
-          <div class="photo-entry">
-              <button class="close-btn">×</button>
-              <img src="https://images.pexels.com/photos/46239/salmon-dish-food-meal-46239.jpeg?cs=srgb&dl=close-up-cooking-dinner-46239.jpg&fm=jpg">
-          </div>
-          <div class="photo-entry">
-              <button class="close-btn">×</button>
-              <img src="https://images.pexels.com/photos/46239/salmon-dish-food-meal-46239.jpeg?cs=srgb&dl=close-up-cooking-dinner-46239.jpg&fm=jpg">
-          </div>
-        </div>
-
-
-        <button type="submit" id="add-photos-btn">Add Photos</button>
-    
-    </div>
-
-    <div class="post-review-container">
-        <button type="submit" id="post-review-btn">Update Review</button>
+    <div class="main-body"> 
+      <!--Restaurant Information-->
+      <div class="restaurant">
+          <div class="logo"></div>
+          <p class="resto-name"> RESTAURANT NAME</p>
       </div>
-    
-      <script src="home-page.js"></script>
+
+      <p id="instruction"> Tell us about your experience </p>
+
+      <!--Review part-->
+      <div class="review-box">
+          <div class="overall-review">
+              <img src="http://pluspng.com/img-png/star-png-star-vector-png-transparent-image-2000.png" class="rating">
+              <img src="http://pluspng.com/img-png/star-png-star-vector-png-transparent-image-2000.png" class="rating">
+              <img src="http://pluspng.com/img-png/star-png-star-vector-png-transparent-image-2000.png" class="rating">
+              <img src="http://pluspng.com/img-png/star-png-star-vector-png-transparent-image-2000.png" class="rating">
+              <img src="http://pluspng.com/img-png/star-png-star-empty-png-2000.png" class="rating">
+              <p> Select your rating</p>
+          </div>
+      
+          <input class="form-input" type="text" name="Title of Review" placeholder="Title of Review" value="Original title" required>
+          <div class="review-text">
+              <textarea placeholder="Write your review here...">Original review</textarea>
+          </div>
+      
+          <div class="review-photo">
+              <div class="photo-entry">
+                  <img src="https://images.pexels.com/photos/46239/salmon-dish-food-meal-46239.jpeg?cs=srgb&dl=close-up-cooking-dinner-46239.jpg&fm=jpg">
+              </div>
+              <div class="photo-entry">
+                  <img src="https://images.pexels.com/photos/46239/salmon-dish-food-meal-46239.jpeg?cs=srgb&dl=close-up-cooking-dinner-46239.jpg&fm=jpg">
+              </div>
+          </div>
+
+          <button type="submit" id="add-photos-btn">Add Photos</button>
+      
+      </div>
+
+      <div class="post-review-container">
+          <button type="submit" id="post-review-btn">Edit Review</button>
+      </div>
+    </div>
+
+    <script src="home-page.js"></script>
   </body>
 
   
