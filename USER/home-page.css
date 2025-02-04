@@ -1,5 +1,5 @@
-h1, h2, h3, h4, a {
-  font-weight: 600;
+body {
+  font-family: 'Lato';
 }
 
 nav {
@@ -49,4 +49,5 @@ nav {
   border-radius: 50px;
   background-color: black;
   margin-right: 16px;
+  overflow: hidden;
 }
