@@ -5,3 +5,13 @@
 #media-option {
   color: black
 }
+
+.profile-body {
+  grid-template-columns: 1fr 5fr 1fr;
+}
+
+.photos-section{
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  row-gap: 2%;
+}
