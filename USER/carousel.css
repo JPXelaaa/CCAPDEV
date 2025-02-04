@@ -33,6 +33,10 @@
       margin: 5% 
     }
 
+    .establishment-logo {
+      width: 60px;
+    }
+
     .prev, .next {
       position: absolute;
       top: 50%;
