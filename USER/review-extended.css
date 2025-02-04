@@ -1,0 +1,278 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f8f8f8;
+}
+
+ /* Navigation Bar */
+ nav {
+    background-color: white;
+    display: flex;
+    justify-content: space-between;
+    padding: 5px;
+    flex-wrap: wrap; 
+    position: sticky; 
+    top: 0;          
+    z-index: 1000; 
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); 
+  }
+
+  .nav-left, .nav-center, .nav-right {
+    align-items: center;
+    flex: 1; 
+    text-align: center;
+  }
+
+  .nav-right {
+    padding: 15px;
+    justify-content: center;
+  }
+
+  .nav-center, .nav-right {
+    display: flex;
+    align-items: center;
+  }
+
+  .nav-right h4 {
+    margin: 0;
+  }
+
+  .nav-right a {
+    margin: 0 10px;
+    text-decoration: none;
+    color: inherit;
+  }
+
+  .profile-option {
+    height: 40px;
+    width: 40px;
+    border-radius: 50px;
+    background-color: black;
+    margin-left: 20px;
+  }
+
+  #page-logo {
+    height: 60px;
+    margin: 0;
+    margin-left: 30%;
+  }
+
+  .content-row {
+    display: flex;
+    justify-content: space-between; 
+    align-items: flex-start;
+    margin: 20px;
+  }
+
+  .search-bar {
+    justify-content: center;
+    flex: 1;
+    border-width: 2px;
+    border-color: black;
+    border-radius: 30px;
+    width: 70%;
+    vertical-align: middle;
+    padding: 10px 15px;
+  }
+
+/** Restaurant Info **/
+.restaurant{
+  display: flex;
+  align-items: center;
+  margin-left: auto;
+  margin-right: auto;
+  width: 80%;
+}
+
+.restaurant-logo {
+  background-color: black;
+  width: 150px;
+  height: 150px;
+  border-radius: 10px;
+  margin: 20px 0;
+
+}
+
+.restaurant-info {
+  display: flex;
+  flex-direction: column;
+  justify-content: left;
+}
+
+#resto-name {
+  font-size: 24px;
+  font-weight: bold;
+  margin-left: 20px; 
+}
+
+.restaurant-rating {
+  display: flex;
+  flex-direction: row;
+}
+
+.overall-review, .restaurant-stars {
+  display: flex;
+  justify-content: left;
+  gap: 5px;
+  margin-bottom: 10px;
+}
+
+.restaurant-stars {
+  margin-left: 20px;
+}
+
+.restaurant-stars p {
+  margin-left: 10px;
+  align-self: center;
+}
+
+.rating {
+  width: 30px;
+}
+
+/**Review Section**/
+
+.reviews {
+  border: 2px solid gray; 
+  padding: 10px;
+  width: 80%;
+  margin: auto;
+  border-radius: 5px;
+  display: flex;
+  flex-direction: column;
+  align-items: left;
+  background-color: #f8f8f8;
+  margin-bottom: 20px;
+}
+
+.review-header {
+  display: flex;
+  justify-content: space-between; 
+  align-items: center; 
+  padding: 2%;
+}
+
+#name-of-establishment {
+  margin: 0;
+}
+
+.overall-review {
+  justify-content: left;
+  margin-left: 4.8%;
+ 
+}
+
+.user-info {
+  display: flex; 
+  align-items: center; 
+}
+
+.profile-picture {
+  width: 40px; 
+  height: 40px;
+  border-radius: 50%; 
+  background-color: gray; 
+}
+
+.username {
+  margin: 0;
+  margin-left: 10px; 
+}
+
+.date-time {
+  margin: 0 4% 0 0;
+}
+
+.review-text {
+  padding: 0% 5% 0% 5%;
+}
+
+.review-photo {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  padding: 5%;
+  gap: 1%
+}
+
+.review-footer {
+  display: flex;
+  text-align: center; 
+  margin-left: 5%;
+  gap: 2%;
+}
+
+.review-footer img {
+  width: 20px; 
+  vertical-align: middle; 
+}
+
+.helpful {
+  background-color: rgb(108, 214, 108);
+}
+
+.unhelpful {
+  background-color: rgb(225, 108, 108);
+}
+
+.helpful, .unhelpful {
+  display: flex;
+  margin-bottom: 10px;  
+  text-align: center; 
+  border-radius: 50px;
+  padding: 3px 10px;
+  width: 140px;
+  gap: 7%;
+}
+
+.helpful:hover, .unhelpful:hover  {
+  cursor: pointer; 
+  opacity: 0.8; 
+}
+
+.photo-entry {
+  border-width: 2px;
+  border-color: gray;
+  border-style: solid;
+  border-radius: 5%;
+  overflow: hidden;
+}
+
+.actual-photo {
+  width: 100%;
+  height: 100%;
+}
+
+/* Navigation Arrows */
+.pages {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 20px;
+}
+
+.page-number, .page-arrow {
+  text-decoration: none;
+  color: black;
+  padding: 8px 12px;
+  margin: 0 5px;
+  border: 1px solid black;
+  border-radius: 5px;
+  background-color: white;
+  font-weight: bold;
+}
+
+.page-number:hover, .page-arrow:hover {
+  background-color: #f0f0f0;
+}
+
+.active {
+  background-color: black;
+  color: white;
+}
+
+.dots {
+  padding: 8px 12px;
+  color: black;
+}
+

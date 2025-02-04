@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Restaurant Reviews</title>
+    
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <link rel="stylesheet" href="review-extended.css">
+    <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="home-page.css">
+    
+</head>
+
+<body>
+    <!-- NAVIGATION BAR -->
+    <nav>
+      <div class="nav-left">
+          <img src="https://www.pngkey.com/png/full/529-5291672_png-image-no-background.png" id="page-logo">
+        </div>
+    
+        <div class="nav-center">
+            <input type="text" placeholder="Search for more establishments..." class="search-bar">
+        </div>
+    
+        <div class="nav-right">
+          <h4><a href="#">Home</a></h4>
+          <h4><a href="user-profile-reviews.html">Profile</a></h4>
+          <div class="profile-container">
+            <div class="profile-option" onclick="toggleLogOut()">
+            </div>
+            <div id="dropdownLogOut" class="absolute top-12 right-0 bg-white shadow-lg border rounded-md z-50 hidden">
+                <ul>
+                  <li class="p-2 hover:bg-gray-100 cursor-pointer">Log out</li>
+                </ul>
+              </div>
+          </div>
+          
+        </div>
+    </nav>
+    
+    <!--Restaurant Information-->
+    <div class="restaurant">
+        <img class="restaurant-logo" src="https://res.cloudinary.com/teepublic/image/private/s---WWuMudp--/c_crop,x_10,y_10/c_fit,h_955/c_crop,g_north_west,h_1038,w_1038,x_-46,y_-42/l_upload:v1565806151:production:blanks:vdbwo35fw6qtflw9kezw/fl_layer_apply,g_north_west,x_-157,y_-153/b_rgb:ffffff/c_limit,f_auto,h_630,q_auto:good:420,w_630/v1556286617/production/designs/4721969_0.jpg">
+        <div class="restaurant-info">
+          <p id="resto-name">Borger King</p>
+          <div class="restaurant-rating">
+            <div class="restaurant-stars">
+              <img src="http://pluspng.com/img-png/star-png-star-vector-png-transparent-image-2000.png" class="rating">
+              <img src="http://pluspng.com/img-png/star-png-star-vector-png-transparent-image-2000.png" class="rating">
+              <img src="http://pluspng.com/img-png/star-png-star-vector-png-transparent-image-2000.png" class="rating">
+              <img src="http://pluspng.com/img-png/star-png-star-vector-png-transparent-image-2000.png" class="rating">
+              <img src="http://pluspng.com/img-png/star-png-star-empty-png-2000.png" class="rating">
+              <p> 4.7 stars (100 reviews)</p>
+            </div>
+              
+          </div>
+
+        </div>
+        
+    </div>
+
+    <!--REVIEWS PART-->
+      <div class="reviews">
+        <div class="review-header">
+          <div class="user-info">
+          <div class="profile-picture"></div>
+          <h4 class="username">Trish Aguarin</h4>
+          </div>
+          <h4 class="date-time">January 27, 2025</h4>
+        </div>
+
+        <div class="overall-review">
+          <img src="http://pluspng.com/img-png/star-png-star-vector-png-transparent-image-2000.png" class="rating">
+          <img src="http://pluspng.com/img-png/star-png-star-vector-png-transparent-image-2000.png" class="rating">
+          <img src="http://pluspng.com/img-png/star-png-star-vector-png-transparent-image-2000.png" class="rating">
+          <img src="http://pluspng.com/img-png/star-png-star-vector-png-transparent-image-2000.png" class="rating">
+          <img src="http://pluspng.com/img-png/star-png-star-empty-png-2000.png" class="rating">
+        </div>
+
+        <div class="review-text">
+          Hello! I loved the food wooow yeeeasasasa!!!Hello! I loved the food wooow yeeeasasasa!!!Wieeee GRABE I loved the food wooow yeeeasasasa!!!Hello! I loved the food wooow yeeeasasasa!!!Hello! I loved the food wooow yeeeasasasa!!!
+        </div>
+
+        <div class="review-photo">
+          <div class="photo-entry">
+              <img src="https://tastesbetterfromscratch.com/wp-content/uploads/2023/06/Pepperoni-Pizza-1-500x500.jpg" class="actual-photo">
+          </div>
+          <div class="photo-entry">
+              <img src="https://www.grandecheese.com/wp-content/uploads/2021/01/Margherita-Pizza-deck-oven.jpg" class="actual-photo">
+          </div>
+      </div>
+
+        <div class="review-footer">
+          <div class="helpful">
+            <img src="https://www.svgrepo.com/show/522577/like.svg" alt="Helpful">
+            Helpful (0)
+          </div>
+          <div class="unhelpful">
+            <img src="https://www.svgrepo.com/show/522518/dislike.svg" alt="Unhelpful">
+            Unhelpful (5)
+          </div>
+        </div>
+
+      </div>  
+
+
+      <div class="reviews">
+        <div class="review-header">
+          <div class="user-info">
+          <div class="profile-picture"></div>
+          <h4 class="username">Philip Quijano</h4>
+          </div>
+          <h4 class="date-time">January 29, 2025</h4>
+        </div>
+
+        <div class="overall-review">
+          <img src="http://pluspng.com/img-png/star-png-star-vector-png-transparent-image-2000.png" class="rating">
+          <img src="http://pluspng.com/img-png/star-png-star-vector-png-transparent-image-2000.png" class="rating">
+          <img src="http://pluspng.com/img-png/star-png-star-vector-png-transparent-image-2000.png" class="rating">
+          <img src="http://pluspng.com/img-png/star-png-star-vector-png-transparent-image-2000.png" class="rating">
+          <img src="http://pluspng.com/img-png/star-png-star-vector-png-transparent-image-2000.png" class="rating">
+        </div>
+
+        <div class="review-text">
+          The ambiance was great, and the food was top-notch. Would definitely recommend to my friends and family and classmates and colleagues and even strangers!! They have the best food in the world. 
+        </div>
+
+        <div class="review-photo">
+          <div class="photo-entry">
+              <img src="https://www.girlgonegourmet.com/wp-content/uploads/2020/08/French-Onion-Hot-Dogs-9.jpg" class="actual-photo">
+          </div>
+      </div>
+
+        <div class="review-footer">
+          <div class="helpful">
+            <img src="https://www.svgrepo.com/show/522577/like.svg" alt="Helpful">
+            Helpful (0)
+          </div>
+          <div class="unhelpful">
+            <img src="https://www.svgrepo.com/show/522518/dislike.svg" alt="Unhelpful">
+            Unhelpful (5)
+          </div>
+        </div>
+
+      </div>
+
+      <div class="reviews">
+        <div class="review-header">
+          <div class="user-info">
+          <div class="profile-picture"></div>
+          <h4 class="username">Diane Cabato</h4>
+          </div>
+          <h4 class="date-time">February 3, 2025</h4>
+        </div>
+
+        <div class="overall-review">
+          <img src="http://pluspng.com/img-png/star-png-star-vector-png-transparent-image-2000.png" class="rating">
+          <img src="http://pluspng.com/img-png/star-png-star-vector-png-transparent-image-2000.png" class="rating">
+          <img src="http://pluspng.com/img-png/star-png-star-vector-png-transparent-image-2000.png" class="rating">
+          <img src="http://pluspng.com/img-png/star-png-star-vector-png-transparent-image-2000.png" class="rating">
+          <img src="http://pluspng.com/img-png/star-png-star-empty-png-2000.png" class="rating">
+        </div>
+
+        <div class="review-text">
+          Service was a bit slow, but the food made up for it! Loved the burger and fries. Also they make the hotdogs look fancy which I really like. Will come back again.
+        </div>
+
+        <div class="review-photo">
+          <div class="photo-entry">
+              <img src="https://www.wellplated.com/wp-content/uploads/2016/03/Black-Bean-Vegan-Burger-Recipe.jpg" class="actual-photo">
+          </div>
+          <div class="photo-entry">
+              <img src="https://www.kitchensanctuary.com/wp-content/uploads/2024/07/Smash-Burgers-square-FS.jpg" class="actual-photo">
+          </div>
+      </div>
+
+        <div class="review-footer">
+          <div class="helpful">
+            <img src="https://www.svgrepo.com/show/522577/like.svg" alt="Helpful">
+            Helpful (0)
+          </div>
+          <div class="unhelpful">
+            <img src="https://www.svgrepo.com/show/522518/dislike.svg" alt="Unhelpful">
+            Unhelpful (5)
+          </div>
+        </div>
+
+      </div> 
+      
+      <div class="pages">
+        <a href="#" class="page-arrow">&lt;</a> 
+        <a href="#" class="page-number active">1</a>
+        <a href="#" class="page-number">2</a>
+        <a href="#" class="page-number">3</a>
+        <span class="dots">...</span>
+        <a href="#" class="page-number">5</a>
+        <a href="#" class="page-arrow">&gt;</a>
+    </div>
+
+        <script src="home-page.js"></script>
+</body>
+</html>
