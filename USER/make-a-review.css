@@ -12,6 +12,10 @@ body {
     font-family: 'Lato';
 }
 
+a {
+  font-weight: 600;
+}
+
 /* Navigation Bar */
 nav {
     background-color: #F4C3B3;
@@ -90,7 +94,7 @@ nav {
     background-color: black;
     width: 150px;
     height: 150px;
-    border-radius: 10px;
+    border-radius: 15px;
     margin-top: 20px;
 }
 
@@ -104,6 +108,7 @@ nav {
 #instruction {
     margin-left: auto;
     margin-right: auto;
+    margin-bottom: 15px;
     margin-top: 20px;
     width: 80%;
     font-size: 18px;
@@ -117,7 +122,7 @@ nav {
     padding: 20px;
     width: 80%;
     margin: auto;
-    border-radius: 5px;
+    border-radius: 15px;
     display: flex;
     flex-direction: column;
     align-items: left;
@@ -189,7 +194,7 @@ nav {
     border-radius: 5px;
     cursor: pointer;
     width: 100%; 
-    max-width: 100px;
+    max-width: 120px;
     align-self: left; 
     margin-top: 15px;
 }
@@ -198,6 +203,7 @@ nav {
   display: flex;
   justify-content: flex-end;
   margin-top: 20px;
+  margin-right: 5%;
 }
 
 #post-review-btn {
