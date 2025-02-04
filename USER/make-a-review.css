@@ -23,49 +23,54 @@ nav {
     top: 0;          
     z-index: 1000; 
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); 
-}
+  }
 
-.nav-left,
-.nav-center,
-.nav-right {
+  .nav-left, .nav-center, .nav-right {
     align-items: center;
     flex: 1; 
     text-align: center;
-}
+  }
 
-.nav-right {
+  .nav-right {
     padding: 15px;
     justify-content: center;
-}
+  }
 
-.nav-center, .nav-right {
+  .nav-center, .nav-right {
     display: flex;
     align-items: center;
-}
+  }
 
-.nav-right h4 {
+  .nav-right h4 {
     margin: 0;
-}
+  }
 
-.nav-right a {
+  .nav-right a {
     margin: 0 10px;
     text-decoration: none;
     color: inherit;
-}
+  }
 
-.profile-option {
+  .profile-option {
     height: 40px;
     width: 40px;
     border-radius: 50px;
     background-color: black;
     margin-left: 20px;
-}
+  }
 
-#page-logo {
+  #page-logo {
     height: 60px;
     margin: 0;
     margin-left: 30%;
-}
+  }
+
+  .content-row {
+    display: flex;
+    justify-content: space-between; 
+    align-items: flex-start;
+    margin: 20px;
+  }
 
 /**Restaurant Information**/
 .restaurant {
@@ -93,6 +98,7 @@ nav {
 #instruction {
     margin-left: auto;
     margin-right: auto;
+    margin-top: 20px;
     width: 80%;
     font-size: 18px;
 }
