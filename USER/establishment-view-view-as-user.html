@@ -1,0 +1,346 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Establishment View (View as User)</title>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+
+    <link rel="stylesheet" href="establishment-view.css">
+
+  </head>
+
+  <body>
+    <!--Navigation Bar-->
+    <nav>
+        <div class="nav-left">
+          <img src="https://www.pngkey.com/png/full/529-5291672_png-image-no-background.png" id="page-logo">
+        </div>
+    
+        <div class="nav-center">
+            <input type="text" placeholder="Search for more establishments..." class="search-bar">
+        </div>
+    
+        <div class="nav-right">
+          <h4><a href="user-profile-reviews.html">Profile</a></h4> <!-- GOES TO ESTABLISHMENT PROFILE-->
+          <div class="profile-container">
+            <div class="profile-option"></div>
+          </div>
+          
+        </div>
+      </nav>
+
+    <!-- TOP HALF -->
+    <div class="top-half">
+        <div class="left-top-half">
+            <div id="logo"></div>
+            <p id="resto-name"> Buns & Slices</p>
+            <div class="stars">
+                <img src="http://pluspng.com/img-png/star-png-star-vector-png-transparent-image-2000.png" id="star-rating">
+			<img src="http://pluspng.com/img-png/star-png-star-vector-png-transparent-image-2000.png" id="star-rating">
+			<img src="http://pluspng.com/img-png/star-png-star-vector-png-transparent-image-2000.png" id="star-rating">
+			<img src="http://pluspng.com/img-png/star-png-star-vector-png-transparent-image-2000.png" id="star-rating">
+			<img src="http://pluspng.com/img-png/star-png-star-empty-png-2000.png" id="star-rating">
+            </div>
+            <p id="num-review"> 4.7 stars (100 reviews) </p>
+            <button type="submit" id="write-review-btn-user">Write a Review</button>
+        </div>
+
+        <div class="center-top-half">
+            <div class="carousel">
+                <button class="arrow left-arrow">&lt;</button>
+                <img id="carousel-img" src="https://dynamic-media-cdn.tripadvisor.com/media/photo-o/2a/24/b1/8f/view-from-sky-deck.jpg?w=600&h=-1&s=1">
+                <button class="arrow right-arrow">&gt;</button>
+        
+                <!-- See All Photos Button -->
+                <div class="photo-container">
+                    <div class="rectangle">
+                        <img id="camera" src="https://www.svgrepo.com/show/533059/camera.svg">
+                        <p id="text">See all photos</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- yung tags, see all photos button-->
+            
+            <div class="tags">
+                <div class="tag-container">
+                    <div class="rectangle">
+                        <p id="text"> Pizza</p>
+                        <img id="x-btn" src="https://www.svgrepo.com/show/522388/close.svg">
+                    </div>
+        
+                    <div class="rectangle">
+                        <p id="text">Hotdog</p>
+                        <img id="x-btn" src="https://www.svgrepo.com/show/522388/close.svg">
+                    </div>
+        
+                    <div class="rectangle">
+                        <p id="text"> Burger </p>
+                        <img id="x-btn" src="https://www.svgrepo.com/show/522388/close.svg">
+                    </div>
+        
+                </div>
+            </div>
+        </div>
+
+        <div class="right-top-half">
+            <div class="location">
+                <h4>Location</h4>
+                <p>DLSU Taft Eme Eme</p>
+            </div>
+
+            <div class="contact">
+                <h4> Contact</h4>
+                <div class="contacts"> 
+                    <p>0909-909-9900</p>
+                    <p>www.companyaddress.com.ph</p>
+                </div>
+                
+            </div>
+
+            <div class="hours">
+                <h4> Hours</h4>
+                <div class="day-time-format">
+                <div class="day-time"> <h6> Mon </h6> <p> 11:00AM - 9:00PM</p> </div>
+                <div class="day-time"> <h6> Tues </h6> <p> 11:00AM - 9:00PM</p> </div>
+                <div class="day-time"> <h6> Wed </h6> <p> 11:00AM - 9:00PM</p> </div>
+                <div class="day-time"> <h6> Thurs </h6> <p> 11:00AM - 9:00PM</p> </div>
+                <div class="day-time"> <h6> Fri </h6> <p> 11:00AM - 9:00PM</p> </div>
+                <div class="day-time"> <h6> Sat </h6> <p> 11:00AM - 9:00PM</p> </div>
+                <div class="day-time"> <h6> Sun </h6> <p> 11:00AM - 9:00PM</p> </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="lower-half">
+        <div class="left-lower-half">
+            <div class="overview">
+                <h4> Overview</h4>
+                <p> "Buns & Slices" is a fun and fast casual eatery serving up 
+                    mouthwatering hotdogs, juicy burgers, and cheesy, oven-baked 
+                    pizzas. Located in the heart of downtown, we pride ourselves 
+                    on using fresh ingredients and crafting delicious meals that 
+                    hit the spot every time. Whether you're grabbing a classic 
+                    cheeseburger, a gourmet pizza with all the toppings, or a 
+                    fully-loaded hotdog, we've got something for everyone.</p>
+            </div>
+
+            <h4 id="label"> Facilities & Services</h4>
+            <div class="faci-servi">
+                <div class="icons">
+                    <div id="icon-pic"></div>
+                    <p>Offers Delivery</p>
+                </div>
+                <div class="icons">
+                    <div id="icon-pic"></div>
+                    <p>Has Wifi Services</p>
+                </div>
+                <div class="icons">
+                    <div id="icon-pic"></div>
+                    <p>Pet-friendly</p>
+                </div>
+                </div>
+            </div>
+        
+        <div class="center-lower-half">
+            <div class="center-lower-half-header">
+                <p id="label"> Reviews</p>
+                <img id="page-link" src="https://www.svgrepo.com/show/510970/external-link.svg">
+            </div>
+            
+            <!-- REVIEWS HERE-->
+            <div class="reviews-container">
+                <div class="recent-review">
+                    <div class="review-header">
+                        <div class="user-info">
+                            <div class="profile-picture"></div>
+                            <h4 class="user-name">Trish Aguarin</h4>
+                        </div>
+                    </div>
+                    
+                    <div class="review-content">
+                        <div class="overall-review">
+                            <img src="http://pluspng.com/img-png/star-png-star-vector-png-transparent-image-2000.png" id="star-rating">
+                            <img src="http://pluspng.com/img-png/star-png-star-vector-png-transparent-image-2000.png" id="star-rating">
+                            <img src="http://pluspng.com/img-png/star-png-star-vector-png-transparent-image-2000.png" id="star-rating">
+                            <img src="http://pluspng.com/img-png/star-png-star-vector-png-transparent-image-2000.png" id="star-rating">
+                            <img src="http://pluspng.com/img-png/star-png-star-empty-png-2000.png" id="star-rating">
+                        </div>
+                
+                        <div class="review-text">
+                            Hello! I loved the food wooow yeeeasasasa!!! Hello! I loved the food wooow yeeeasasasa!!! Wieee...
+                        </div>
+                
+                        <div class="review-photo">
+                            <div class="photo-entry">
+                                <img src="https://tastesbetterfromscratch.com/wp-content/uploads/2023/06/Pepperoni-Pizza-1-500x500.jpg" class="actual-photo">
+                            </div>
+                            <div class="photo-entry">
+                                <img src="https://www.grandecheese.com/wp-content/uploads/2021/01/Margherita-Pizza-deck-oven.jpg" class="actual-photo">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            
+                <!-- Second Review -->
+                <div class="recent-review">
+                    <div class="review-header">
+                        <div class="user-info">
+                            <div class="profile-picture"></div>
+                            <h4 class="user-name"> Philip Quijano </h4>
+                        </div>
+                    </div>
+                    
+                    <div class="review-content">
+                        <div class="overall-review">
+                            <img src="http://pluspng.com/img-png/star-png-star-vector-png-transparent-image-2000.png" id="star-rating">
+                            <img src="http://pluspng.com/img-png/star-png-star-vector-png-transparent-image-2000.png" id="star-rating">
+                            <img src="http://pluspng.com/img-png/star-png-star-vector-png-transparent-image-2000.png" id="star-rating">
+                            <img src="http://pluspng.com/img-png/star-png-star-vector-png-transparent-image-2000.png" id="star-rating">
+                            <img src="http://pluspng.com/img-png/star-png-star-vector-png-transparent-image-2000.png" id="star-rating">
+                        </div>
+                
+                        <div class="review-text">
+                            The ambiance was great, and the food was top-notch. Would definitely recommend to my...
+                        </div>
+                
+                        <div class="review-photo">
+                            <div class="photo-entry">
+                                <img src="https://www.girlgonegourmet.com/wp-content/uploads/2020/08/French-Onion-Hot-Dogs-9.jpg" class="actual-photo">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            
+                <!-- Third Review -->
+                <div class="recent-review">
+                    <div class="review-header">
+                        <div class="user-info">
+                            <div class="profile-picture"></div>
+                            <h4 class="user-name"> Diane Cabato</h4>
+                        </div>
+                    </div>
+                    
+                    <div class="review-content">
+                        <div class="overall-review">
+                            <img src="http://pluspng.com/img-png/star-png-star-vector-png-transparent-image-2000.png" id="star-rating">
+                            <img src="http://pluspng.com/img-png/star-png-star-vector-png-transparent-image-2000.png" id="star-rating">
+                            <img src="http://pluspng.com/img-png/star-png-star-vector-png-transparent-image-2000.png" id="star-rating">
+                            <img src="http://pluspng.com/img-png/star-png-star-vector-png-transparent-image-2000.png" id="star-rating">
+                            <img src="http://pluspng.com/img-png/star-png-star-empty-png-2000.png" id="star-rating">
+                        </div>
+                
+                        <div class="review-text">
+                            Service was a bit slow, but the food made up for it! Loved the burger and fries. Also...
+                        </div>
+                
+                        <div class="review-photo">
+                            <div class="photo-entry">
+                                <img src="https://www.wellplated.com/wp-content/uploads/2016/03/Black-Bean-Vegan-Burger-Recipe.jpg" class="actual-photo">
+                            </div>
+                            <div class="photo-entry">
+                                <img src="https://www.kitchensanctuary.com/wp-content/uploads/2024/07/Smash-Burgers-square-FS.jpg" class="actual-photo">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+        </div>
+
+        <div class="right-lower-half"></div>
+        
+    </div>
+
+    <footer>
+        <div class="site-details">
+          <div class="site-name">
+            <h3> SITE NAME </h3>
+          </div>
+          <div class="site-description">
+            <h6>Description here Description here Description here Description here Description here Description here Description here</h6>
+          </div>
+        </div>
+  
+        <div class="site-details">
+          <div class="site-name">
+            <h3> TERMS OF SERVICE </h3>
+          </div>
+          <div class="site-description">
+            <h6>By using our service, you agree to follow our terms. Use it lawfully, keep your account secure, and respect our policies. We may update these terms, and continued use means acceptance.</h6>
+          </div>
+        </div>
+  
+        <div class="developers">
+          <div class="group-label">
+            <h3> DEVELOPERS </h3>
+          </div>
+          <div class="group-names">
+            <h6>Aguarin</h6>
+            <h6>Cabato</h6>
+            <h6>Pineda</h6>
+            <h6>Quijano</h6>
+          </div>
+        </div>
+  
+        <div class="group-members">
+          <div class="group-label">
+            <h3> CONTACT US </h3>
+          </div>
+          <div class="group-email">
+            <div class="contact-detail">
+              <img src="https://www.svgrepo.com/show/511921/email-1573.svg">
+              <h6>trish_ann_aguarin@dlsu.edu.ph</h6>
+            </div>
+            <div class="contact-detail">
+              <img src="https://www.svgrepo.com/show/511921/email-1573.svg">
+              <h6>marxandrea_cabato@dlsu.edu.ph</h6>
+            </div>
+            <div class="contact-detail">
+              <img src="https://www.svgrepo.com/show/511921/email-1573.svg">
+              <h6>trish_ann_aguarin@dlsu.edu.ph</h6>
+            </div>
+            <div class="contact-detail">
+              <img src="https://www.svgrepo.com/show/511921/email-1573.svg">
+              <h6>trish_ann_aguarin@dlsu.edu.ph</h6>
+            </div>
+          </div>
+        </div>
+      </footer>
+
+    <script>
+        const images = [
+        "https://dynamic-media-cdn.tripadvisor.com/media/photo-o/2a/24/b1/8f/view-from-sky-deck.jpg?w=600&h=-1&s=1",
+        "https://dynamic-media-cdn.tripadvisor.com/media/photo-o/16/c7/47/4a/seven-corners-restaurant.jpg?w=600&h=-1&s=1",
+        "https://upload.wikimedia.org/wikipedia/commons/thumb/e/ef/Restaurant_N%C3%A4sinneula.jpg/1200px-Restaurant_N%C3%A4sinneula.jpg",
+        "https://tastesbetterfromscratch.com/wp-content/uploads/2023/06/Pepperoni-Pizza-1-500x500.jpg",
+        "https://www.grandecheese.com/wp-content/uploads/2021/01/Margherita-Pizza-deck-oven.jpg",
+        "https://www.girlgonegourmet.com/wp-content/uploads/2020/08/French-Onion-Hot-Dogs-9.jpg",
+        "https://www.thewickednoodle.com/wp-content/uploads/2016/07/Mexican-Gourmet-Hot-Dogs-1.jpg",
+        "https://www.kitchensanctuary.com/wp-content/uploads/2024/07/Smash-Burgers-square-FS.jpg",
+        "https://www.wellplated.com/wp-content/uploads/2016/03/Black-Bean-Vegan-Burger-Recipe.jpg"
+
+    ];
+
+    let currentImageIndex = 0;
+    const imageElement = document.getElementById("carousel-img");
+
+    document.querySelector(".left-arrow").addEventListener("click", () => {
+        currentImageIndex = (currentImageIndex - 1 + images.length) % images.length;
+        imageElement.src = images[currentImageIndex];
+    });
+
+    document.querySelector(".right-arrow").addEventListener("click", () => {
+        currentImageIndex = (currentImageIndex + 1) % images.length;
+        imageElement.src = images[currentImageIndex];
+    });
+
+    </script>
+
+  </body>
+</html>
