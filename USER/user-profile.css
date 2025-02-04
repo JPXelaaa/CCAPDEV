@@ -2,10 +2,15 @@ body, html {
   display: flex;
   flex-direction: column;
   height: 100%;
+  font-family: 'Lato';
 }
 
-h1, h2, h3, h4, a {
+h1, h2, h3, h4 {
   font-weight: 600;
+}
+
+a {
+  font-style: normal;
 }
 
 .profile-body {
@@ -152,11 +157,15 @@ h1, h2, h3, h4, a {
   text-align: center;
 }
 
-.review-header, .review-establishment {
+.review-header {
   display: flex;
   justify-content: space-between; 
   align-items: center; 
   padding: 2%;
+}
+
+.review-establishment h2, .review-establishment h3 {
+  text-align: left;
 }
 
 #name-of-establishment {
