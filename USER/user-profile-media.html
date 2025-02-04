@@ -6,6 +6,9 @@
     <title>User - Media</title>
     <script src="https://cdn.tailwindcss.com"></script>
 
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap" rel="stylesheet">
+
     <link rel="stylesheet" href="starting-page.css">
     <link rel="stylesheet" href="user-profile.css">
     <link rel="stylesheet" href="user-profile-media.css">
@@ -16,17 +19,18 @@
   <body>
     <nav>
       <div class="nav-left">
-        <img src="https://www.pngkey.com/png/full/529-5291672_png-image-no-background.png" id="page-logo">
+        <img src="/Resources/BiteRate.png" id="page-logo">
       </div>
 
       <div class="nav-center">
       </div>
 
       <div class="nav-right">
-				<h4><a href="home-page-carousel.html">Home</a></h4>
-				<h4><a href="user-profile-reviews.html">Profile</a></h4>
+				<h2 style="font-size: 18px; font-weight: 600;"><a href="home-page-carousel.html">Home</a></h4>
+				<h2 style="font-size: 18px; font-weight: 600;"><a href="user-profile-reviews.html">Profile</a></h4>
         <div class="profile-container">
           <div class="profile-option" onclick="toggleLogOut()">
+            <img src="https://i.pinimg.com/originals/6d/8b/9b/6d8b9b45c14da6fbfd09a7ede56b4a83.jpg">
           </div>
           <div id="dropdownLogOut" class="absolute top-12 right-0 bg-white shadow-lg border rounded-md z-50 hidden">
               <ul>
@@ -40,16 +44,15 @@
 
     <div class="profile-header">
       <div class="image-cover">
-        <img src="https://pm1.narvii.com/6242/32f3729841d52657c0400ba81a74018425a54039_hq.jpg" id="cover-photo">
           <div class="profile-header-inner">
             <div class="profile-header-picture">
               <img src="https://i.pinimg.com/originals/6d/8b/9b/6d8b9b45c14da6fbfd09a7ede56b4a83.jpg">
             </div>
             <div class="profile-header-details">
               <div>
-                <h2> Trish Aguarin </h2>
-                <h3> @trishaguarin </h3>
-                <h3 id="num-review"> 61 total review(s)</h3>
+                <h2 style="font-size: 30px; font-weight: 700;"> Trish Aguarin </h2>
+                <h2> @trishaguarin </h3>
+                <h2 id="num-review"> 61 total review(s)</h3>
               </div>
             </div>
           </div>
@@ -60,13 +63,7 @@
       <div class="left-profile-body">
       </div>
       <div class="center-profile-body">
-        <div class="option-area">
-          <span id="about-option"><a href="user-profile-about.html">About</a></span>
-          <span class="option-separator"> | </span>
-          <span id="reviews-option"><a href="user-profile-reviews.html">Reviews</a></span>
-          <span class="option-separator"> | </span>
-          <span id="media-option"><a href="user-profile-media.html">Media</a></span>
-        </div>
+        <h2 style="font-size: 30px; font-weight: 600;">Media</h3>
 
         <div class="photos-section">
           <div class="photo-entry">

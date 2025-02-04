@@ -9,6 +9,9 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
     <script src="https://cdn.tailwindcss.com"></script>
 
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap" rel="stylesheet">
+
     <link rel="stylesheet" href="starting-page.css">
     <link rel="stylesheet" href="user-profile.css">
     <link rel="stylesheet" href="user-profile.css">
@@ -20,17 +23,18 @@
   <body>
     <nav>
       <div class="nav-left">
-        <img src="https://www.pngkey.com/png/full/529-5291672_png-image-no-background.png" id="page-logo">
+        <img src="/Resources/BiteRate.png" id="page-logo">
       </div>
 
       <div class="nav-center">
       </div>
 
       <div class="nav-right">
-				<h4><a href="home-page-carousel.html">Home</a></h4>
-				<h4><a href="user-profile-reviews.html">Profile</a></h4>
+				<h2 style="font-size: 18px; font-weight: 300;"><a href="home-page-carousel.html">Home</a></h4>
+				<h2 style="font-size: 18px; font-weight: 300;"><a href="own-user-profile-review.html">Profile</a></h4>
         <div class="profile-container">
           <div class="profile-option" onclick="toggleLogOut()">
+            <img src="https://i.pinimg.com/originals/6d/8b/9b/6d8b9b45c14da6fbfd09a7ede56b4a83.jpg">
           </div>
           <div id="dropdownLogOut" class="absolute top-12 right-0 bg-white shadow-lg border rounded-md z-50 hidden">
               <ul>
@@ -44,22 +48,22 @@
 
     <div class="profile-header">
       <div class="image-cover">
-        <img src="https://pm1.narvii.com/6242/32f3729841d52657c0400ba81a74018425a54039_hq.jpg" id="cover-photo">
           <div class="profile-header-inner">
             <div class="profile-header-picture">
               <img src="https://i.pinimg.com/originals/6d/8b/9b/6d8b9b45c14da6fbfd09a7ede56b4a83.jpg">
             </div>
             <div class="profile-header-details">
               <div>
-                <h2> Trish Aguarin </h2>
-                <h3> @trishaguarin </h3>
-                <h3 id="num-review"> 61 total review(s)</h3>
+                <h2 style="font-size: 30px; font-weight: 700;"> Trish Aguarin </h2>
+                <h2> @trishaguarin </h3>
+                <h2 id="num-review"> 61 total review(s)</h3>
               </div>
             </div>
             <div class="edit-profile">
-              <button id="editProfileBtn">
-                Edit Profile
-              </button>
+              <a href="edit-user-account.html">
+                <button id="editProfileBtn">Edit Profile</button>
+              </a>
+            
             </div>
           </div>
         </div>
@@ -67,30 +71,31 @@
 
     <div class="profile-body">
       <div class="left-profile-body">
+        <h3 style="font-size: 22px; font-weight: 600;"> About Me</h3>
+          <div class="about-section">
+            <div class="review-text">
+              Nandito dapat yung short description
+            </div>
+          </div>
       </div>
-      <div class="center-profile-body">
-        <div class="option-area">
-          <span id="about-option"><a href="own-user-profile-about.html">About</a></span>
-          <span class="option-separator"> | </span>
-          <span id="reviews-option"><a href="own-user-profile-review.html">Reviews</a></span>
-            <span class="option-separator"> | </span>
-            <span id="media-option"><a href="own-user-profile-media.html">Media</a></span>
-      </div>
-        
+
+      <div class="center-profile-body">  
+        <h3 style="font-size: 22px; font-weight: 600;"> Past Review(s)</h3>
         <div>
           <div class="past-review">
             <div class="review-header">
               <div class="user-info">
               <div class="profile-picture"></div>
-              <h4 class="username">Trish Aguarin</h4>
+              <h2 style="font-size: 18px; font-weight: 600;" class="username">Trish Aguarin</h4>
               </div>
-              <h4 class="date-time">January 27, 2025</h4>
+              <h2 style="font-size: 18px; font-weight: 600;" class="date-time">January 27, 2025</h4>
             </div>
   
             <div class="review-establishment">
-              <h3 id="name-of-establishment">Name of Establishment</h3>
+              <h2 style="font-size: 26px; font-weight: 600;" id="name-of-establishment">Title of Review</h3>
+              <h3 style="font-size: 22px; font-weight: 600;" id="name-of-establishment">Name of Establishment</h3>
             </div>
-
+  
             <div class="overall-review">
               <img src="http://pluspng.com/img-png/star-png-star-vector-png-transparent-image-2000.png" class="rating">
               <img src="http://pluspng.com/img-png/star-png-star-vector-png-transparent-image-2000.png" class="rating">
@@ -115,7 +120,7 @@
             <div class="review-footer">
               <div class="edit-post">
                 <img src="https://www.svgrepo.com/show/511909/edit-cover-1481.svg" alt="Edit">
-                Edit Postc <!-- edit-a-review--->
+                Edit Post <!-- edit-a-review--->
               </div>
               <div class="delete-post">
                 <img src="https://www.svgrepo.com/show/511788/delete-1487.svg" alt="Delete">
@@ -131,9 +136,44 @@
           
         </div>
       </div>
-        <div class="right-profile-body">
-  
+      <div class="right-profile-body">
+        <h3 style="font-size: 22px; font-weight: 600;">Media</h3>
+        <div class="photos-div">
+          <div class="right-header">
+            <h4 style="font-size: 18px; font-weight: 600;" id="photos-label">Photos</h4>
+            <h4 style="font-size: 18px; font-weight: 600; color: grey" id="see-all-label"><a href="own-user-profile-media.html">See all</a></h4>
+          </div>
+          <div class="photos-section">
+            <div class="photo-entry">
+              <img src="https://images.pexels.com/photos/46239/salmon-dish-food-meal-46239.jpeg?cs=srgb&amp;dl=close-up-cooking-dinner-46239.jpg&amp;fm=jpg" class="actual-photo">
+            </div>
+            <div class="photo-entry">
+              <img src="https://images.pexels.com/photos/46239/salmon-dish-food-meal-46239.jpeg?cs=srgb&amp;dl=close-up-cooking-dinner-46239.jpg&amp;fm=jpg" class="actual-photo">
+            </div>
+            <div class="photo-entry">
+              <img src="https://images.pexels.com/photos/46239/salmon-dish-food-meal-46239.jpeg?cs=srgb&amp;dl=close-up-cooking-dinner-46239.jpg&amp;fm=jpg" class="actual-photo">
+            </div>
+            <div class="photo-entry">
+              <img src="https://images.pexels.com/photos/46239/salmon-dish-food-meal-46239.jpeg?cs=srgb&amp;dl=close-up-cooking-dinner-46239.jpg&amp;fm=jpg" class="actual-photo">
+            </div>
+            <div class="photo-entry">
+              <img src="https://images.pexels.com/photos/46239/salmon-dish-food-meal-46239.jpeg?cs=srgb&amp;dl=close-up-cooking-dinner-46239.jpg&amp;fm=jpg" class="actual-photo">
+            </div>
+            <div class="photo-entry">
+              <img src="https://images.pexels.com/photos/46239/salmon-dish-food-meal-46239.jpeg?cs=srgb&amp;dl=close-up-cooking-dinner-46239.jpg&amp;fm=jpg" class="actual-photo">
+            </div>
+            <div class="photo-entry">
+              <img src="https://images.pexels.com/photos/46239/salmon-dish-food-meal-46239.jpeg?cs=srgb&amp;dl=close-up-cooking-dinner-46239.jpg&amp;fm=jpg" class="actual-photo">
+            </div>
+            <div class="photo-entry">
+              <img src="https://images.pexels.com/photos/46239/salmon-dish-food-meal-46239.jpeg?cs=srgb&amp;dl=close-up-cooking-dinner-46239.jpg&amp;fm=jpg" class="actual-photo">
+            </div>
+            <div class="photo-entry">
+              <img src="https://images.pexels.com/photos/46239/salmon-dish-food-meal-46239.jpeg?cs=srgb&amp;dl=close-up-cooking-dinner-46239.jpg&amp;fm=jpg" class="actual-photo">
+            </div>
+          </div>
         </div>
+      </div>
       </div>
       <script src="home-page.js"></script>
       

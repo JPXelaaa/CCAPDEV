@@ -6,6 +6,9 @@
     <title>User - Review</title>
     <script src="https://cdn.tailwindcss.com"></script>
 
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap" rel="stylesheet">
+
     <link rel="stylesheet" href="starting-page.css">
     <link rel="stylesheet" href="user-profile.css">
     <link rel="stylesheet" href="home-page.css">
@@ -23,7 +26,7 @@
 
       <div class="nav-right">
 				<h2 style="font-size: 18px; font-weight: 600;"><a href="home-page-carousel.html">Home</a></h4>
-				<h2 style="font-size: 18px; font-weight: 600;"><a href="user-profile-reviews.html">Profile</a></h4>
+				<h2 style="font-size: 18px; font-weight: 600;"><a href="own-user-profile-review.html">Profile</a></h4>
         <div class="profile-container">
           <div class="profile-option" onclick="toggleLogOut()">
             <img src="https://i.pinimg.com/originals/6d/8b/9b/6d8b9b45c14da6fbfd09a7ede56b4a83.jpg">
@@ -46,9 +49,9 @@
             </div>
             <div class="profile-header-details">
               <div>
-                <h2 style="font-size: 30px; font-weight: 700;" style="font-size: 30px; font-weight: 700;"> Trish Aguarin </h2>
-                <h2 style="font-size: 22px; font-weight: 600;"> @trishaguarin </h3>
-                <h2 style="font-size: 22px; font-weight: 600;" id="num-review"> 61 total review(s)</h3>
+                <h2 style="font-size: 30px; font-weight: 700;"> Trish Aguarin </h2>
+                <h2> @trishaguarin </h3>
+                <h2 id="num-review"> 61 total review(s)</h3>
               </div>
             </div>
           </div>
@@ -78,7 +81,8 @@
 					</div>
 
 					<div class="review-establishment">
-						<h2 style="font-size: 22px; font-weight: 600;" id="name-of-establishment">Name of Establishment</h3>
+            <h2 style="font-size: 26px; font-weight: 600;" id="name-of-establishment">Title of Review</h3>
+						<h3 style="font-size: 22px; font-weight: 600;" id="name-of-establishment">Name of Establishment</h3>
 					</div>
 
 					<div class="overall-review">
@@ -123,7 +127,7 @@
 			<div class="photos-div">
 				<div class="right-header">
 					<h4 style="font-size: 18px; font-weight: 600;" id="photos-label">Photos</h4>
-					<h4 style="font-size: 18px; font-weight: 600;" id="see-all-label">See all</h4>
+					<h4 style="font-size: 18px; font-weight: 600; color: grey" id="see-all-label"><a href="user-profile-media.html">See all</a></h4>
 				</div>
 				<div class="photos-section">
 					<div class="photo-entry">
