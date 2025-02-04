@@ -11,6 +11,9 @@
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="home-page.css">
 
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap" rel="stylesheet">
+
   </head>
 
   <body>
@@ -25,6 +28,7 @@
         <div class="nav-right">
           <div class="profile-container">
             <div class="profile-option" onclick="toggleLogOut()">
+                <img src="https://i.pinimg.com/736x/5b/78/b1/5b78b1c7e4fc33a221fc53c80314ad13.jpg">
             </div>
             <div id="dropdownLogOut" class="absolute top-12 right-0 bg-white shadow-lg border rounded-md z-50 hidden">
                 <ul>
@@ -39,14 +43,13 @@
     <!-- Logo and Restaurant Name-->
     <div class="profile-header">
         <div class="image-cover">
-            <img src="https://pm1.narvii.com/6242/32f3729841d52657c0400ba81a74018425a54039_hq.jpg">
             <div class="profile-header-inner">
                 <div class="profile-header-picture">
                     <img src="https://i.pinimg.com/736x/5b/78/b1/5b78b1c7e4fc33a221fc53c80314ad13.jpg">
                 </div>
                 <div class="profile-header-details">
                     <div>
-                        <h2> Establishment Name </h2>
+                        <p id="establishment-name"> Establishment Name </h2>
                         <div class="overall-rating">
                             <img id="star-rating" src="https://www.svgrepo.com/show/418551/star-rating.svg" alt="star rating">
                             <img id="star-rating" src="https://www.svgrepo.com/show/418551/star-rating.svg" alt="star rating">
@@ -63,7 +66,8 @@
                     </button>
                     <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
                         <a class="dropdown-item" href="edit-establishment-account.html">Change Account Details</a> 
-                        <a class="dropdown-item" href="edit-establishment-deets.html">Edit Establishment Details</a> 
+                        <a class="dropdown-item" href="edit-establishment-deets.html">Edit Establishment Details</a>
+                        <a class="dropdown-item" href="edit-establishment-deets.html">View as User</a> 
                     </div>
                 </div>
             </div>
@@ -133,14 +137,14 @@
 				<div class="review-header">
 					<div class="user-info">
 						<div class="profile-picture"></div>
-						<h4 class="username">Trish Aguarin</h4>
+						<p class="username">Trish Aguarin</p>
 					</div>
 					
-                    <h4 class="date-time">February 1, 2025</h4>
+                    <p class="date-time">February 1, 2025</p>
 				</div>
 
 				<div class="review-establishment">
-					<h3 id="name-of-establishment">Name of Establishment</h3>
+					<p id="title"><b>Title of Review</b></p>
 				</div>
 
 				<div class="overall-review">
@@ -177,13 +181,13 @@
 				<div class="review-header">
 			        <div class="user-info">
 						<div class="profile-picture"></div>
-						    <h4 class="username">Diane Cabato</h4>
+						    <p class="username">Diane Cabato</p>
 					    </div>
-					<h4 class="date-time">January 27, 2025</h4>
+					<p class="date-time">January 27, 2025</p>
 				</div>
 
 				<div class="review-establishment">
-					<h3 id="name-of-establishment">Name of Establishment</h3>
+					<p id="title"><b>Title of Review</b></p>
 				</div>
 
 				<div class="overall-review">
