@@ -143,13 +143,16 @@ body {
     color: black;
   }
 
-  #write-review-btn {
+  #write-review-btn, #write-review-btn-user {
     border-radius: 20px;
     align-items: center;
     padding: 10px 15px;
     background-color: grey;
     margin-top: 50px;
+  }
 
+  #write-review-btn-user {
+    border: none;
   }
   
 /**CENTER TOP HALF **/
@@ -337,7 +340,7 @@ body {
   #label {
     font-weight: bold;
     text-align: left;
-    min-width: 80px;
+    min-width: 70px;
 }
 
   .faci-servi {
@@ -368,6 +371,13 @@ body {
 .center-lower-half-header {
     display: flex;
     flex-direction: row;
+}
+
+.center-lower-half a{
+  width: 25px;
+  height: 25px;
+  padding-left: 0px;
+  margin-right: 5px;
 }
 
 #page-link {
@@ -409,8 +419,12 @@ body {
     background-color: gray;
 }
 
-.username {
+.username, .user-name {
     font-weight: bold;
+}
+
+.user-name {
+    margin-left: 15px;
 }
 
 .review-content {
@@ -484,4 +498,22 @@ footer h3 {
 footer img {
   width: 10%;
   margin-right: 5%;
+}
+
+/** FOR NO ACCOUNTS **/
+#log-in {
+  width: 100px;
+  height: 30px;
+  background-color: rgb(205, 203, 203);
+  border-radius: 10px;
+  margin: 0 3px;
+}
+
+#sign-up {
+  width: 100px;
+  height: 30px;
+  color: #fff;
+  background-color: rgb(58, 57, 57);
+  border-radius: 10px;
+  margin: 0 3px;
 }
