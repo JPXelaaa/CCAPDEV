@@ -1,5 +1,9 @@
-h2, h3, h4 {
+h1, h2, h3, h4, a {
   font-weight: 600;
+}
+
+nav {
+  background-color: #F4C3B3;
 }
 
 .nav-center, .nav-right {
@@ -16,7 +20,6 @@ h2, h3, h4 {
   display: flex;
   left: 20%;
   width: 100%;
-
 }
 
 .nav-right h4 {

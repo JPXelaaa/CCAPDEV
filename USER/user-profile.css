@@ -4,6 +4,10 @@ body, html {
   height: 100%;
 }
 
+h1, h2, h3, h4, a {
+  font-weight: 600;
+}
+
 .profile-body {
   flex: 1;
 }
@@ -48,9 +52,14 @@ body, html {
   border-radius: 50px;
   background-color: black;
   margin-left: 20px;
+  overflow: hidden;
 }
 
-
+.image-cover {
+  background-color: #ffeae2;
+  border-style: solid;
+  border-bottom-width: 2px;
+}
 
 .profile-header-inner {
   position: absolute;
@@ -62,7 +71,6 @@ body, html {
   display: flex;
   justify-content: space-evenly;
   align-items: center;
-  color: white;
   font-size: 18px;
 }
 
@@ -86,13 +94,19 @@ body, html {
 .profile-body {
   display: grid;
   grid-template-columns: 1fr 3fr 1fr;
-  background-color: antiquewhite;
+  background-color: #FAF5F5;
 }
 
 .left-profile-body, .center-profile-body, .right-profile-body {
   align-items: center;
-  padding: 15px;
+  padding: 25px;
+  background-color: white;
 }
+
+.left-profile-body h2, .center-profile-body h2, .right-profile-body h2 {
+  text-align: center;
+}
+
 
 .option-area {
   text-align: center;
@@ -115,12 +129,27 @@ body, html {
 }
 
 
-.past-review {
+.past-review, .about-section, .photos-div {
   border-width: 1px;
   border-style: solid;
-  border-radius: 3%;
+  border-radius: 25px;
   background-color: white;
   margin-top: 2%;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); 
+}
+
+
+.about-section {
+  border-width: 1px;
+  border-style: solid;
+  border-radius: 25px;
+  background-color: white;
+  margin-top: 6%;
+  padding: 8% 0;
+}
+
+.profile-body h3 {
+  text-align: center;
 }
 
 .review-header, .review-establishment {
@@ -185,22 +214,13 @@ body, html {
   vertical-align: middle; 
 }
 
-.helpful {
-  background-color: rgb(108, 214, 108);
+.helpful, .edit-post {
+  background-color:   #b4dba3;
 }
 
-.unhelpful {
-  background-color: rgb(225, 108, 108);
+.unhelpful, .delete-post {
+  background-color: #f7a68b;
 }
-
-.edit-post {
-  background-color: rgb(108, 214, 108);
-}
-
-.delete-post {
-  background-color: rgb(225, 108, 108);
-}
-
 .helpful, .unhelpful, .edit-post, .delete-post {
   display: flex;
   margin-bottom: 5%;
@@ -218,11 +238,10 @@ body, html {
 
 
 .photos-div {
-  border-width: 2px;
-  border-color: rgb(0, 0, 0);
-  border-style: solid;
   background-color: white;
   border-radius: 5%;
+  padding: 10px;
+  margin-top: 6%;
 }
 
 .right-header {
@@ -233,7 +252,7 @@ body, html {
 
 .photos-section {
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-columns: 1fr 1fr;
   gap: 1%;
   margin-top: 2%;
   margin-bottom: 2%;

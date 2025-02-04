@@ -21,8 +21,8 @@
     }
     
     .establishment-preview {
-      width: 45vh; 
-      height: 45vh;
+      width: 330px; 
+      height: 330px;
       margin: 0 3vh; 
       background-color: white;
       transition: transform 1s ease; 
