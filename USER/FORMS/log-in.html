@@ -6,7 +6,6 @@
   <title>Login Pop-up</title>
   <style>
     .modal {
-      /* display: none; */
       position: fixed; 
       z-index: 1;
       left: 0;
@@ -15,7 +14,6 @@
       height: 100%; 
       background-color: rgba(0, 0, 0, 0.4); 
     }
-
     .modal-content {
       background-color: white;
       margin: 10% auto;
@@ -24,34 +22,8 @@
       width: 30%; 
       max-width: 300px; 
       border-radius: 10px;
-    }
-
-    #log-in-title {
       text-align: center;
     }
-
-    .close {
-      color: #aaa;
-      float: right;
-      font-size: 28px;
-      font-weight: bold;
-    }
-
-    .close:hover,
-    .close:focus {
-      color: black;
-      text-decoration: none;
-      cursor: pointer;
-    }
-
-    .form-label {
-      margin-bottom: 0;
-    }
-
-    .account-prompt {
-      margin-top: 15px;
-    }
-
     .form-input {
       width: 93%;
       padding: 10px;
@@ -59,7 +31,6 @@
       border: 1px solid #ccc;
       border-radius: 5px;
     }
-
     .form-button {
       width: 100%;
       padding: 10px;
@@ -68,52 +39,76 @@
       border: none;
       border-radius: 5px;
       cursor: pointer;
-      align-items: center;
-      margin-top: 15%;
+      margin-top: 5%;
+    }
+    .button-container {
+      display: flex;
+      justify-content: space-around;
+      margin-bottom: 15px;
     }
 
-    .form-button:hover {
-      background-color: #45a049;
+    .button-container-a {
+      display: flex;
+      justify-content: space-around;
+      margin-bottom: 15px;
+      margin-top: 10px;
+    }
+    .role-button {
+      padding: 10px 20px;
+      background-color: #007BFF;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+    .role-button:hover {
+      background-color: #4CAF50;
     }
   </style>
 </head>
 <body>
-
   <div id="loginModal" class="modal">
-    <!-- Modal content -->
     <div class="modal-content">
-      <span class="close">&times;</span>
-      <h2 id="log-in-title">Log In</h2>
-      
-      <!-- Login Form -->
-      <form action="/login" method="post">
+      <h2 id="log-in-title">Log In as User</h2>
+      <form id="loginForm" action="#" method="post">
         <h3 class="form-label">Username</h3>
         <input class="form-input" type="text" name="username" required>
         <h3 class="form-label">Password</h3>
         <input class="form-input" type="password" name="password" required>
-        <button class="form-button" type="submit">Log In</button>
+        <div class="button-container-a">
+          <button class="role-button" id="userLogin">User</button>
+          <button class="role-button" id="establishmentLogin">Establishment</button>
+        </div>
       </form>
-
       <div class="account-prompt">
-        
-        No account yet? Sign up
-        <a href="#">here</a>.
+        No account yet? Sign up <a href="#">here</a>.
       </div>
     </div>
   </div>
 
   <script>
-    var btn = document.getElementById("loginBtn");
-    var span = document.getElementsByClassName("close")[0];
-
-    btn.onclick = function() {
-      modal.style.display = "block";
-    }
+    let userType = "user"; // Default to user
     
-    span.onclick = function() {
-      modal.style.display = "none";
-    }
-  </script>
+    document.getElementById("userLogin").addEventListener("click", function() {
+      userType = "user";
+      document.getElementById("log-in-title").textContent = "Log In as User";
+      document.getElementById("userLogin").classList.add("active");
+      document.getElementById("establishmentLogin").classList.remove("active");
+    });
 
+    document.getElementById("establishmentLogin").addEventListener("click", function() {
+      userType = "establishment";
+      document.getElementById("log-in-title").textContent = "Log In as Establishment";
+      document.getElementById("establishmentLogin").classList.add("active");
+      document.getElementById("userLogin").classList.remove("active");
+    });
+
+    document.getElementById("loginForm").addEventListener("submit", function(event) {
+      event.preventDefault();
+      let newPage = userType === "user" ? "/../USER/home-page-carousel.html" : "../../USER/establishment-profile.html";
+      window.parent.postMessage("closeLogin", "*");
+      window.top.location.href = newPage;
+    });
+  </script>
 </body>
 </html>
