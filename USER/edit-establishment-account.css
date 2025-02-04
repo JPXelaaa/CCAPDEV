@@ -3,7 +3,7 @@ html, body {
   padding: 0;
   height: 100%;
   background-color: #FAF5F5; 
-  font-family: 'Lato', sans-serif;
+  font-family: 'Lato';
 }
 
 
@@ -84,6 +84,7 @@ html, body {
   margin-bottom: 20px;
   font-weight: bold;
   font-family: 'Montserrat';
+  font-size: 30px;
 }
 
 .form-input{

@@ -1,6 +1,14 @@
+html, body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  background-color: #FAF5F5; 
+  font-family: 'Lato';
+}
+
 /* Navigation Bar */
 nav {
-  background-color: white;
+  background-color: #F4C3B3;
   display: flex;
   justify-content: space-between;
   padding: 5px;
@@ -64,11 +72,17 @@ nav {
         margin-left: 150px;
     }
 
+    .left-section p {
+      margin-bottom: 3px;
+    }
+
     #sign-up-title {
       text-align: left;
       color: rgb(0, 0, 0);
-      margin-bottom: 10px;
+      margin-bottom: 20px;
       font-weight: bold;
+      font-family: 'Montserrat';
+      font-size: 30px;
     }
 
     .form-input, .form-select {
@@ -79,11 +93,13 @@ nav {
       border-radius: 5px;
       font-size: 14px;
       background-color: white;
+      margin-bottom: 3px;
     }
 
     .hours-row {
       display: flex;
       justify-content: space-between;
+      align-items: center;
     }
 
     .hours-row select {
@@ -103,15 +119,17 @@ nav {
     }
 
     #schedule-btn {
-      width: 20%;
-      padding: 10px 15px;
-      background-color: black;
+      width: 20%; 
+      height: 40px; 
+      padding: 5px; 
+      background-color: #4b4b4b;
       color: white;
       border: none;
       border-radius: 5px;
       cursor: pointer;
       display: flex;
       justify-content: center;
+      text-align: center;
     }
 
     /** Right Side **/
@@ -173,14 +191,18 @@ nav {
       margin-bottom: 50px; 
     }
 
+    .add-buttons {
+      display: flex;
+      flex-direction: row;
+    }
+
     .add-btn {
       padding: 10px 15px;
-      background-color: rgb(165, 165, 165);
-      color: black;
+      background-color: #4b4b4b;
+      color: white;
       border: none;
       border-radius: 5px;
       cursor: pointer;
-      display: flex;
       margin: 15px;
       justify-content: center;
     }
@@ -195,7 +217,7 @@ nav {
 
     .submit-btn {
       padding: 10px 15px;
-      background-color: black;
+      background-color: #4b4b4b;
       color: white;
       border: none;
       border-radius: 5px;
@@ -204,7 +226,7 @@ nav {
 
     #cancel {
       padding: 10px 15px;
-      background-color: gray;
+      background-color: #8F8983;
       color: white;
       border: none;
       border-radius: 5px;
