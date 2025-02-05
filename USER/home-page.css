@@ -1,9 +1,19 @@
 body {
   font-family: 'Lato';
+  background-color: #FAF5F5;
 }
 
 nav {
   background-color: #F4C3B3;
+  display: flex;
+  justify-content: space-between;
+  padding: 5px;
+  flex-wrap: wrap; 
+  position: sticky; 
+  top: 0;          
+  z-index: 1000; 
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); 
+  height: 10vh;
 }
 
 .nav-center, .nav-right {

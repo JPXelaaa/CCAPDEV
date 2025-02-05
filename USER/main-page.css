@@ -4,6 +4,7 @@ body {
   height: 100%;
   overflow-y: auto;
   font-family: Arial, sans-serif; 
+  background-color: #FAF5F5;
 }
 
 h2 {
@@ -29,7 +30,6 @@ nav {
   z-index: 1000; 
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); 
   height: 10vh;
-  margin-bottom: 3%;
 }
 
 .nav-left,
@@ -242,7 +242,7 @@ nav {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  margin: 0 11% 1%;
+  margin: 3% 11% 1%;
 }
 
 .pagination a {
