@@ -16,7 +16,38 @@
     <link rel="stylesheet" href="user-profile.css">
     <link rel="stylesheet" href="own-user-profile.css">
     <link rel="stylesheet" href="home-page.css">
+    
+    <style>
+      .overlay {
+        display: none;
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0, 0, 0, 0.6);
+        z-index: 1000;
+      }
+      iframe {
+          background: transparent;
+          border: none;
+        }
+      #deleteModal {
+        margin: 0px;
+        margin-top: 0px;
+        display: none;
+        position: fixed;
+        top: 20%;
+        left: 30%;
+        width: 650px;
+        max-width: 800px;
+        height: 600px;
+        border: none;
+        background-color: transparent;
+        z-index: 1001;
+      }
 
+    </style>
   </head>
 
   <body>
@@ -44,6 +75,8 @@
         
       </div>
     </nav>
+    <div id="overlay" class="overlay"></div>
+    <iframe id="deleteModal" src="../USER/FORMS/delete-review-prompt.html"></iframe>
 
     <div class="profile-header">
       <div class="image-cover">
@@ -62,7 +95,6 @@
               <a href="edit-user-account.html">
                 <button id="editProfileBtn">Edit Profile</button>
               </a>
-            
             </div>
           </div>
         </div>
@@ -125,12 +157,12 @@
                   Edit Post <!-- edit-a-review--->
                 </div>
               </a>
-              <a href="FORMS/delete-review-prompt.html">
+              <button class = "delete-prompt">
                 <div class="delete-post">
                   <img src="https://www.svgrepo.com/show/511788/delete-1487.svg" alt="Delete">
                   Delete Post <!-- delete-review-prompt--->
                 </div>
-              </a>
+              </button>
             </div>
               
   
@@ -176,12 +208,12 @@
                   Edit Post <!-- edit-a-review--->
                 </div>
               </a>
-              <a href="FORMS/delete-review-prompt.html">
+              <button class = "delete-prompt">
                 <div class="delete-post">
                   <img src="https://www.svgrepo.com/show/511788/delete-1487.svg" alt="Delete">
                   Delete Post <!-- delete-review-prompt--->
                 </div>
-              </a>
+              </button>
             </div>
               
   
@@ -228,12 +260,12 @@
                   Edit Post <!-- edit-a-review--->
                 </div>
               </a>
-              <a href="FORMS/delete-review-prompt.html">
+              <button class = "delete-prompt">
                 <div class="delete-post">
                   <img src="https://www.svgrepo.com/show/511788/delete-1487.svg" alt="Delete">
                   Delete Post <!-- delete-review-prompt--->
                 </div>
-              </a>
+              </button>
             </div>
               
   
@@ -280,12 +312,12 @@
                   Edit Post <!-- edit-a-review--->
                 </div>
               </a>
-              <a href="FORMS/delete-review-prompt.html">
+              <button class = "delete-prompt">
                 <div class="delete-post">
                   <img src="https://www.svgrepo.com/show/511788/delete-1487.svg" alt="Delete">
                   Delete Post <!-- delete-review-prompt--->
                 </div>
-              </a>
+              </button>
             </div>
               
   
@@ -333,12 +365,12 @@
                   Edit Post <!-- edit-a-review--->
                 </div>
               </a>
-              <a href="FORMS/delete-review-prompt.html">
+              <button class = "delete-prompt">
                 <div class="delete-post">
                   <img src="https://www.svgrepo.com/show/511788/delete-1487.svg" alt="Delete">
                   Delete Post <!-- delete-review-prompt--->
                 </div>
-              </a>
+              </button>
             </div>
               
   
@@ -377,6 +409,29 @@
       </div>
       </div>
       <script src="home-page.js"></script>
-      
+      <script>
+        document.querySelectorAll('.delete-prompt').forEach(button => {
+          button.addEventListener('click', function() {
+              document.getElementById('overlay').style.display = 'block';
+              document.getElementById('deleteModal').style.display = 'block';
+          });
+      });
+        
+        document.getElementById("overlay").onclick = function() {
+          document.getElementById("deleteModal").style.display = "none";
+          document.getElementById("overlay").style.display = "none";
+        };
+        
+        window.addEventListener("message", function(event) {
+          if (event.data === "closeDelete") {
+            document.getElementById("deleteModal").style.display = "none";
+            document.getElementById("overlay").style.display = "none";
+            window.location.reload();
+          } if (event.data === "closeCancel") {
+            document.getElementById("deleteModal").style.display = "none";
+            document.getElementById("overlay").style.display = "none";
+          } 
+        });
+      </script>
     </body>
   </html>
