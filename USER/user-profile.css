@@ -9,10 +9,6 @@ h1, h2, h3, h4, a {
   font-weight: 600;
 }
 
-a {
-  font-style: normal;
-}
-
 .profile-body {
   flex: 1;
 }
@@ -138,7 +134,7 @@ a {
   border-width: 1px;
   border-style: solid;
   border-radius: 25px;
-  background-color: white;
+  background-color: #FAF5F5;
   margin-top: 2%;
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); 
 }
@@ -148,7 +144,7 @@ a {
   border-width: 1px;
   border-style: solid;
   border-radius: 25px;
-  background-color: white;
+  background-color: #FAF5F5;
   margin-top: 6%;
   padding: 8% 0;
 }
@@ -232,7 +228,7 @@ a {
 }
 .helpful, .unhelpful, .edit-post, .delete-post {
   display: flex;
-  margin-bottom: 5%;
+  margin-bottom: 3%;
   text-align: center; 
   border-radius: 50px;
   padding: 3px 10px;
@@ -245,9 +241,13 @@ a {
   opacity: 0.8; 
 }
 
+.edit-post, .delete-post {
+  margin-bottom: 15%;
+}
+
 
 .photos-div {
-  background-color: white;
+  background-color: #FAF5F5;
   border-radius: 5%;
   padding: 10px;
   margin-top: 6%;
