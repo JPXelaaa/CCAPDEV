@@ -398,24 +398,23 @@
       });
     </script>
 
-    <script>
-      document.getElementById("log-in").onclick = function() {
-        document.getElementById("loginModal").style.display = "block";
-        document.getElementById("overlay").style.display = "block";
-      };
-      
-      document.getElementById("overlay").onclick = function() {
-        document.getElementById("loginModal").style.display = "none";
-        document.getElementById("overlay").style.display = "none";
-      };
-      
-      window.addEventListener("message", function(event) {
-        if (event.data === "closeLogin") {
-          document.getElementById("loginModal").style.display = "none";
-          document.getElementById("overlay").style.display = "none";
-          window.location.reload();
-        }
-      });
-    </script>
+<script>
+  document.getElementById("log-in").onclick = function() {
+    document.getElementById("loginModal").style.display = "block";
+    document.getElementById("overlay").style.display = "block";
+  };
+  
+  document.getElementById("overlay").onclick = function() {
+    document.getElementById("loginModal").style.display = "none";
+    document.getElementById("overlay").style.display = "none";
+  };
+  
+  window.addEventListener("message", function(event) {
+    if (event.data === "closeLogin") {
+      document.getElementById("loginModal").style.display = "none";
+      document.getElementById("overlay").style.display = "none";
+    }
+  });
+</script>
   </body>
 </html>
