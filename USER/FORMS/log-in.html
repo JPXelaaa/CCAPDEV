@@ -45,14 +45,15 @@
     }
     .role-button {
       padding: 10px 20px;
-      background-color: #f7a68b;
+      background-color: #D08E7F;
       color: white;
       border: none;
       border-radius: 5px;
       cursor: pointer;
     }
     .role-button:hover {
-      background-color: #4CAF50;
+      background-color: #eecbc3;
+      color: black;
     }
   </style>
 </head>
@@ -89,7 +90,7 @@
 
     document.getElementById("loginForm").addEventListener("submit", function(event) {
       event.preventDefault();
-      let newPage = userType === "user" ? "/../USER/home-page-carousel.html" : "../../USER/establishment-profile.html";
+      let newPage = userType === "user" ? "../../USER/home-page-carousel.html" : "../../USER/establishment-profile.html";
       window.parent.postMessage("closeLogin", "*");
       window.top.location.href = newPage;
     });
