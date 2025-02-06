@@ -36,11 +36,23 @@ body {
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); 
   }
 
+  .nav-left {
+    display: flex;
+    align-items: center; 
+    flex: 1;
+}
+
   .nav-left, .nav-center, .nav-right {
     align-items: center;
     flex: 1; 
     text-align: center;
   }
+
+  .nav-center {
+    justify-content: center; 
+    flex: 2; 
+    max-width: 45%;
+}
 
   .nav-right {
     padding: 15px;
@@ -72,8 +84,12 @@ body {
 
   #page-logo {
     height: 60px;
-    margin: 0;
     margin-left: 30%;
+  }
+
+  #page-logo-orig {
+    height: 60px;
+    margin-left: 9.8%;
   }
 
   .content-row {
@@ -92,7 +108,19 @@ body {
     vertical-align: middle;
     padding: 10px 15px;
     background-color: #FAF5F5;
+  }
 
+  .search-bar-orig {
+    width: 80%;
+    justify-content: center;
+    flex: 1;
+    border-width: 2px;
+    border-radius: 30px;
+    padding: 10px 15px;
+    vertical-align: middle;
+    background-color: #FAF5F5;
+    font-size: 14px;
+    margin-left: 80px;
   }
 
   /**TOP HALF**/
