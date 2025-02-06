@@ -32,6 +32,10 @@ nav {
   width: 100%;
 }
 
+.dropdownLogOut ul {
+  height: 20px;
+}
+
 .nav-right h4 {
   margin: 0;
 }
