@@ -1,0 +1,380 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Establishment Profile</title>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <link rel="stylesheet" href="establishment-profile.css">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="home-page.css">
+
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap" rel="stylesheet">
+
+  </head>
+
+  <body>
+    <!--Navigation Bar-->
+    <nav>
+        <div class="nav-left">
+          <img src="https://www.pngkey.com/png/full/529-5291672_png-image-no-background.png" id="page-logo">
+        </div>
+    
+        <div class="nav-center"></div>
+    
+        <div class="nav-right">
+          <div class="profile-container">
+            <div class="profile-option" onclick="toggleLogOut()">
+                <img src="https://i.pinimg.com/736x/5b/78/b1/5b78b1c7e4fc33a221fc53c80314ad13.jpg">
+            </div>
+            <div id="dropdownLogOut" class="absolute top-12 right-0 bg-white shadow-lg border rounded-md z-50 hidden">
+                <ul>
+                  <li class="p-2 hover:bg-gray-100 cursor-pointer">Log out</li>
+                </ul>
+              </div>
+          </div>
+          
+        </div>
+      </nav>
+
+    <!-- Logo and Restaurant Name-->
+    <div class="profile-header">
+        <div class="image-cover">
+            <div class="profile-header-inner">
+                <div class="profile-header-picture">
+                    <img src="../Resources/PastaEBasta.png">
+                </div>
+                <div class="profile-header-details">
+                    <div>
+                        <p id="establishment-name"> Pasta E Basta  </h2>
+                        <div class="overall-rating">
+                            <img id="star-rating" src="https://www.svgrepo.com/show/418551/star-rating.svg" alt="star rating">
+                            <img id="star-rating" src="https://www.svgrepo.com/show/418551/star-rating.svg" alt="star rating">
+                            <img id="star-rating" src="https://www.svgrepo.com/show/418551/star-rating.svg" alt="star rating">
+                            <img id="star-rating" src="https://www.svgrepo.com/show/418551/star-rating.svg" alt="star rating">
+                            <img id="star-rating" src="https://www.svgrepo.com/show/418551/star-rating.svg" alt="star rating">
+                        </div>
+                        <p id="num-review"> 4.8 stars (100 reviews) </p>
+                    </div>
+                </div>
+                <div class="edit-profile">
+                    <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-bs-toggle="dropdown" aria-expanded="false">
+                        Edit Profile
+                    </button>
+                    <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                        <a class="dropdown-item" href="edit-establishment-account.html">Change Account Details</a> 
+                        <a class="dropdown-item" href="edit-establishment-deets.html">Edit Establishment Details</a>
+                        <a class="dropdown-item" href="edit-establishment-deets.html">View as User</a> 
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!--Review Section-->
+    <div class="profile-body">
+		<div class="left-profile-body"></div>
+		<div class="center-profile-body">
+            <!--Top portion of Review -->
+            <div class="tags">
+                <p class="review-title">Recent Reviews</p>
+                <div class="tag-container">
+                    <div class="rectangle">
+                        <p id="tag-text"> With photos</p>
+                        <img id="x-btn" src="https://www.svgrepo.com/show/522388/close.svg">
+                    </div>
+
+                    <div class="rectangle">
+                        <p id="tag-text"> Positive Rating</p>
+                        <img id="x-btn" src="https://www.svgrepo.com/show/522388/close.svg">
+                    </div>
+
+                    <div class="rectangle">
+                        <p id="tag-text"> Good Service</p>
+                        <img id="x-btn" src="https://www.svgrepo.com/show/522388/close.svg">
+                    </div>
+
+                    <div class="sort">
+                        <img id="sort-picture" src="https://www.svgrepo.com/show/532208/sort-amount-down.svg">
+                        <div class="sort-filter">
+                            <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-bs-toggle="dropdown" aria-expanded="false">
+                            Sort
+                            </button>
+                            <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                                <a class="dropdown-item" href="#">Relevance</a>
+                                <a class="dropdown-item" href="#">Recent</a>
+                                <a class="dropdown-item" href="#">Rating: High to Low</a>
+                                <a class="dropdown-item" href="#">Rating: Low to High</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="filter">
+                        <img id="filter-picture" src="https://www.svgrepo.com/show/532165/filter-list.svg">
+                        <div class="sort-filter">
+                            <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-bs-toggle="dropdown" aria-expanded="false">
+                            Filter
+                            </button>
+                            <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                                <a class="dropdown-item" href="#">5 stars</a>
+                                <a class="dropdown-item" href="#">4 stars</a>
+                                <a class="dropdown-item" href="#">3 stars</a>
+                                <a class="dropdown-item" href="#">2 stars</a>
+                                <a class="dropdown-item" href="#">1 star</a>                                
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+            
+            <!--Review Box-->
+			<div class="recent-review">
+				<div class="review-header">
+					<div class="user-info">
+						<div class="profile-picture">
+                            <a href="user-profile-reviews.html"><img src="https://i.pinimg.com/originals/6d/8b/9b/6d8b9b45c14da6fbfd09a7ede56b4a83.jpg"></a>
+                        </div>
+						<p class="username">Philip Quijano</p>
+					</div>
+					
+                    <p class="date-time">February 6, 2025</p>
+				</div>
+
+				<div class="review-establishment">
+					<p id="title"><b>Authentic Italian Perfection</b></p>
+				</div>
+
+				<div class="overall-review">
+					<img src="http://pluspng.com/img-png/star-png-star-vector-png-transparent-image-2000.png" id="star-rating">
+					<img src="http://pluspng.com/img-png/star-png-star-vector-png-transparent-image-2000.png" id="star-rating">
+					<img src="http://pluspng.com/img-png/star-png-star-vector-png-transparent-image-2000.png" id="star-rating">
+					<img src="http://pluspng.com/img-png/star-png-star-vector-png-transparent-image-2000.png" id="star-rating">
+					<img src="http://pluspng.com/img-png/star-png-star-vector-png-transparent-image-2000.png" id="star-rating">
+				</div>
+
+				<div class="review-text">
+					From the handmade pasta to the rich, flavorful sauces, everything tasted just like Italy. The ambiance was warm and inviting, making it a perfect dining experience.
+				</div>
+
+				<div class="review-photo">
+					<div class="photo-entry">
+						<img src="https://www.tasteofhome.com/wp-content/uploads/2018/01/Beef-Bolognese-with-Linguine_EXPS_FT21_130403_F_0423_1.jpg?fit=700,700" class="actual-photo">
+					</div>
+					<div class="photo-entry">
+						<img src="https://www.tasteofhome.com/wp-content/uploads/2018/01/Best-Lasagna_EXPS_FT24_36333_0326_JR_2.jpg?fit=700,700" class="actual-photo">
+					</div>
+				</div>
+
+				<div class="review-footer">
+                    <div class="footer-content">
+                        <img id="thumbs-up" src="https://www.svgrepo.com/show/522577/like.svg" alt="Thumbs-up">
+                        <p class="reply-text">Reply</p>
+                    </div>
+                </div>
+			
+			</div>
+                
+            <div class="recent-review">
+				<div class="review-header">
+			        <div class="user-info">
+						<div class="profile-picture">
+                            <a href="user-profile-reviews.html"><img src="https://i.pinimg.com/originals/6d/8b/9b/6d8b9b45c14da6fbfd09a7ede56b4a83.jpg"></a>
+                        </div>
+						    <p class="username">Dencel Pineda</p>
+					    </div>
+					<p class="date-time">February 4, 2025</p>
+				</div>
+
+				<div class="review-establishment">
+					<p id="title"><b>Best Pasta in Town!</b></p>
+				</div>
+
+				<div class="overall-review">
+					<img src="http://pluspng.com/img-png/star-png-star-vector-png-transparent-image-2000.png" id="star-rating">
+					<img src="http://pluspng.com/img-png/star-png-star-vector-png-transparent-image-2000.png" id="star-rating">
+					<img src="http://pluspng.com/img-png/star-png-star-vector-png-transparent-image-2000.png" id="star-rating">
+					<img src="http://pluspng.com/img-png/star-png-star-vector-png-transparent-image-2000.png" id="star-rating">
+                    <img src="http://pluspng.com/img-png/star-png-star-vector-png-transparent-image-2000.png" id="star-rating">
+				</div>
+
+				<div class="review-text">
+					Every dish was cooked to perfection, and the ingredients tasted incredibly fresh. The service was top-notch, and the homemade tiramisu was the best I’ve ever had!
+				</div>
+
+				<div class="review-photo">
+					<div class="photo-entry">
+						<img src="https://www.tasteofhome.com/wp-content/uploads/2018/01/Penne-alla-Vodka_EXPS_DIYD19_111856_E09_11_3b-4.jpg?fit=700,700" class="actual-photo">
+					</div>
+					<div class="photo-entry">
+						<img src="https://www.tasteofhome.com/wp-content/uploads/2018/01/Sicilian-Meat-Sauce_EXPS_EDSC17_55796_D03_09_5b.jpg?fit=700,700" class="actual-photo">
+					</div>
+				</div>
+
+				<div class="review-footer">
+                       <div class="footer-content">
+                        <img id="thumbs-up" src="https://www.svgrepo.com/show/522577/like.svg" alt="Thumbs-up">
+                        <p class="reply-text">Reply</p>
+                    </div>
+                </div>
+			
+			</div>
+
+            <div class="recent-review">
+                <div class="review-header">
+                    <div class="user-info">
+                        <div class="profile-picture">
+                            <a href="user-profile-reviews.html"><img src="https://i.pinimg.com/originals/6d/8b/9b/6d8b9b45c14da6fbfd09a7ede56b4a83.jpg"></a>
+                        </div>
+                        <p class="username">Diane Cabato</p>
+                    </div>
+                    
+                    <p class="date-time">February 2, 2025</p>
+                </div>
+
+                <div class="review-establishment">
+                    <p id="title"><b>A Pasta Lover’s Dream</b></p>
+                </div>
+
+                <div class="overall-review">
+                    <img src="http://pluspng.com/img-png/star-png-star-vector-png-transparent-image-2000.png" id="star-rating">
+                    <img src="http://pluspng.com/img-png/star-png-star-vector-png-transparent-image-2000.png" id="star-rating">
+                    <img src="http://pluspng.com/img-png/star-png-star-vector-png-transparent-image-2000.png" id="star-rating">
+                    <img src="http://pluspng.com/img-png/star-png-star-vector-png-transparent-image-2000.png" id="star-rating">
+					<img src="http://pluspng.com/img-png/star-png-star-vector-png-transparent-image-2000.png" id="star-rating">
+                </div>
+
+                <div class="review-text">
+                    The menu has a fantastic variety of pasta dishes, and every bite was packed with authentic flavors. The wine selection complemented the meals perfectly.
+                </div>
+
+                <div class="review-photo">
+                    <div class="photo-entry">
+                        <img src="https://www.tasteofhome.com/wp-content/uploads/2018/07/Crockpot-Short-Rib-Ragu-over-Pappardelle_EXPS_THSO18_218391_B04_20_8b-3.jpg?fit=700,700" class="actual-photo">
+                    </div>
+                    <div class="photo-entry">
+                        <img src="https://www.tasteofhome.com/wp-content/uploads/2018/01/Chicken-Scampi_EXPS_FT21_26051_F_0506_1.jpg?fit=700,700" class="actual-photo">
+                    </div>
+                </div>
+
+                <div class="review-footer">
+                    <div class="footer-content">
+                        <img id="thumbs-up" src="https://www.svgrepo.com/show/522577/like.svg" alt="Thumbs-up">
+                        <p class="reply-text">Reply</p>
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="recent-review">
+                <div class="review-header">
+                    <div class="user-info">
+                        <div class="profile-picture">
+                            <a href="user-profile-reviews.html"><img src="https://i.pinimg.com/originals/6d/8b/9b/6d8b9b45c14da6fbfd09a7ede56b4a83.jpg"></a>
+                        </div>
+                        <p class="username">Trish Aguarin</p>
+                    </div>
+                    
+                    <p class="date-time">January 26, 2025</p>
+                </div>
+
+                <div class="review-establishment">
+                    <p id="title"><b> Perfect for a Cozy Italian Night </b></p>
+                </div>
+
+                <div class="overall-review">
+                    <img src="http://pluspng.com/img-png/star-png-star-vector-png-transparent-image-2000.png" id="star-rating">
+                    <img src="http://pluspng.com/img-png/star-png-star-vector-png-transparent-image-2000.png" id="star-rating">
+                    <img src="http://pluspng.com/img-png/star-png-star-vector-png-transparent-image-2000.png" id="star-rating">
+					<img src="http://pluspng.com/img-png/star-png-star-vector-png-transparent-image-2000.png" id="star-rating">
+                    <img src="http://pluspng.com/img-png/star-png-star-vector-png-transparent-image-2000.png" id="star-rating">
+                </div>
+
+                <div class="review-text">
+                    The homemade ravioli was absolutely divine, and the garlic bread was a must-try. The staff made us feel like family, and we can’t wait to come back!
+                </div>
+
+                <div class="review-photo">
+                    <div class="photo-entry">
+                        <img src="https://www.tasteofhome.com/wp-content/uploads/2018/01/Greek-Salad-Ravioli_EXPS_THFM17_198715_C09_22_3b-1.jpg?fit=700,700" class="actual-photo">
+                    </div>
+                    <div class="photo-entry">
+                        <img src="https://www.tasteofhome.com/wp-content/uploads/2018/01/Easy-Beef-Stuffed-Shells_EXPS_FT24_85164_EC_041124_1.jpg?fit=700,700" class="actual-photo">
+                    </div>
+                </div>
+
+                <div class="review-footer">
+                    <div class="footer-content">
+                        <img id="thumbs-up" src="https://www.svgrepo.com/show/522577/like.svg" alt="Thumbs-up">
+                        <p class="reply-text">Reply</p>
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="recent-review">
+                <div class="review-header">
+                    <div class="user-info">
+                        <div class="profile-picture">
+                            <a href="user-profile-reviews.html"><img src="https://i.pinimg.com/originals/6d/8b/9b/6d8b9b45c14da6fbfd09a7ede56b4a83.jpg"></a>
+                        </div>
+                        <p class="username">John Smith</p>
+                    </div>
+                    
+                    <p class="date-time">January 21, 2025</p>
+                </div>
+
+                <div class="review-establishment">
+                    <p id="title"><b>Great Food, Slightly Slow Service</b></p>
+                </div>
+
+                <div class="overall-review">
+                    <img src="http://pluspng.com/img-png/star-png-star-vector-png-transparent-image-2000.png" id="star-rating">
+                    <img src="http://pluspng.com/img-png/star-png-star-vector-png-transparent-image-2000.png" id="star-rating">
+                    <img src="http://pluspng.com/img-png/star-png-star-vector-png-transparent-image-2000.png" id="star-rating">
+					<img src="http://pluspng.com/img-png/star-png-star-vector-png-transparent-image-2000.png" id="star-rating">
+                    <img src="http://pluspng.com/img-png/star-png-star-empty-png-2000.png" id="star-rating">
+                </div>
+
+                <div class="review-text">
+                    The pasta was fresh, and the flavors were spot on, but our food took longer than expected to arrive. Still, the quality made up for the wait!
+
+                <div class="review-photo">
+                    <div class="photo-entry">
+                        <img src="https://www.tasteofhome.com/wp-content/uploads/2017/09/Authentic-Pasta-Carbonara_EXPS_THAM17_172742_D11_08_2b.jpg?fit=700,700" class="actual-photo">
+                    </div>
+                    <div class="photo-entry">
+                        <img src="https://www.tasteofhome.com/wp-content/uploads/2020/04/Pasta-Napolitana_EXPS_FT20_244521_F_0226_1-4.jpg?fit=700,700" class="actual-photo">
+                    </div>
+                </div>
+
+                <div class="review-footer">
+                    <div class="footer-content">
+                        <img id="thumbs-up" src="https://www.svgrepo.com/show/522577/like.svg" alt="Thumbs-up">
+                        <p class="reply-text">Reply</p>
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="pages">
+                <a href="#" class="page-arrow">&lt;</a> 
+                <a href="#" class="page-number active">1</a>
+                <a href="#" class="page-number">2</a>
+                <a href="#" class="page-number">3</a>
+                <span class="dots">...</span>
+                <a href="#" class="page-number">5</a>
+                <a href="#" class="page-arrow">&gt;</a>
+            </div>
+
+        </div>
+        
+        <div class="right-profile-body"></div>
+    </div>
+    <script src="home-page.js"></script>
+  </body>
+</html>

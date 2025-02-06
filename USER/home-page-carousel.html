@@ -285,7 +285,7 @@
     <script src="home-page.js"></script>
     <script>
       document.addEventListener("DOMContentLoaded", function () {
-        document.body.classList.add("fade-in"); // Ensure page fades in on load
+        document.body.classList.add("fade-in"); 
   
         const links = document.querySelectorAll("a");
   
@@ -295,11 +295,11 @@
               event.preventDefault();
               const targetUrl = this.href;
   
-              document.body.classList.add("fade-out"); // Apply fade-out effect
+              document.body.classList.add("fade-out"); 
   
               setTimeout(() => {
                 window.location.href = targetUrl;
-              }, 500); // Delay must match CSS transition time
+              }, 500); 
             });
           }
         });

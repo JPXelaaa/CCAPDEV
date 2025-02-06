@@ -1,0 +1,381 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Establishment Profile</title>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <link rel="stylesheet" href="establishment-profile.css">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="home-page.css">
+
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap" rel="stylesheet">
+
+  </head>
+
+  <body>
+    <!--Navigation Bar-->
+    <nav>
+        <div class="nav-left">
+          <img src="https://www.pngkey.com/png/full/529-5291672_png-image-no-background.png" id="page-logo">
+        </div>
+    
+        <div class="nav-center"></div>
+    
+        <div class="nav-right">
+          <div class="profile-container">
+            <div class="profile-option" onclick="toggleLogOut()">
+                <img src="https://i.pinimg.com/736x/5b/78/b1/5b78b1c7e4fc33a221fc53c80314ad13.jpg">
+            </div>
+            <div id="dropdownLogOut" class="absolute top-12 right-0 bg-white shadow-lg border rounded-md z-50 hidden">
+                <ul>
+                  <li class="p-2 hover:bg-gray-100 cursor-pointer">Log out</li>
+                </ul>
+              </div>
+          </div>
+          
+        </div>
+      </nav>
+
+    <!-- Logo and Restaurant Name-->
+    <div class="profile-header">
+        <div class="image-cover">
+            <div class="profile-header-inner">
+                <div class="profile-header-picture">
+                    <img src="../Resources/Sizzling&Smoke.png">
+                </div>
+                <div class="profile-header-details">
+                    <div>
+                        <p id="establishment-name"> Sizzling & Smoke </h2>
+                        <div class="overall-rating">
+                            <img id="star-rating" src="https://www.svgrepo.com/show/418551/star-rating.svg" alt="star rating">
+                            <img id="star-rating" src="https://www.svgrepo.com/show/418551/star-rating.svg" alt="star rating">
+                            <img id="star-rating" src="https://www.svgrepo.com/show/418551/star-rating.svg" alt="star rating">
+                            <img id="star-rating" src="https://www.svgrepo.com/show/418551/star-rating.svg" alt="star rating">
+                            <img id="star-rating" src="https://www.svgrepo.com/show/418551/star-rating.svg" alt="star rating">
+                        </div>
+                        <p id="num-review"> 4.8 stars (102 reviews) </p>
+                    </div>
+                </div>
+                <div class="edit-profile">
+                    <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-bs-toggle="dropdown" aria-expanded="false">
+                        Edit Profile
+                    </button>
+                    <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                        <a class="dropdown-item" href="edit-establishment-account.html">Change Account Details</a> 
+                        <a class="dropdown-item" href="edit-establishment-deets.html">Edit Establishment Details</a>
+                        <a class="dropdown-item" href="edit-establishment-deets.html">View as User</a> 
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!--Review Section-->
+    <div class="profile-body">
+		<div class="left-profile-body"></div>
+		<div class="center-profile-body">
+            <!--Top portion of Review -->
+            <div class="tags">
+                <p class="review-title">Recent Reviews</p>
+                <div class="tag-container">
+                    <div class="rectangle">
+                        <p id="tag-text"> With photos</p>
+                        <img id="x-btn" src="https://www.svgrepo.com/show/522388/close.svg">
+                    </div>
+
+                    <div class="rectangle">
+                        <p id="tag-text"> Positive Rating</p>
+                        <img id="x-btn" src="https://www.svgrepo.com/show/522388/close.svg">
+                    </div>
+
+                    <div class="rectangle">
+                        <p id="tag-text"> Good Service</p>
+                        <img id="x-btn" src="https://www.svgrepo.com/show/522388/close.svg">
+                    </div>
+
+                    <div class="sort">
+                        <img id="sort-picture" src="https://www.svgrepo.com/show/532208/sort-amount-down.svg">
+                        <div class="sort-filter">
+                            <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-bs-toggle="dropdown" aria-expanded="false">
+                            Sort
+                            </button>
+                            <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                                <a class="dropdown-item" href="#">Relevance</a>
+                                <a class="dropdown-item" href="#">Recent</a>
+                                <a class="dropdown-item" href="#">Rating: High to Low</a>
+                                <a class="dropdown-item" href="#">Rating: Low to High</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="filter">
+                        <img id="filter-picture" src="https://www.svgrepo.com/show/532165/filter-list.svg">
+                        <div class="sort-filter">
+                            <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-bs-toggle="dropdown" aria-expanded="false">
+                            Filter
+                            </button>
+                            <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                                <a class="dropdown-item" href="#">5 stars</a>
+                                <a class="dropdown-item" href="#">4 stars</a>
+                                <a class="dropdown-item" href="#">3 stars</a>
+                                <a class="dropdown-item" href="#">2 stars</a>
+                                <a class="dropdown-item" href="#">1 star</a>                                
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+            
+            <!--Review Box-->
+			<div class="recent-review">
+				<div class="review-header">
+					<div class="user-info">
+						<div class="profile-picture">
+                            <a href="user-profile-reviews.html"><img src="https://i.pinimg.com/originals/6d/8b/9b/6d8b9b45c14da6fbfd09a7ede56b4a83.jpg"></a>
+                        </div>
+						<p class="username">Diane Cabato</p>
+					</div>
+					
+                    <p class="date-time">February 4, 2025</p>
+				</div>
+
+				<div class="review-establishment">
+					<p id="title"><b>Amazing experience!</b></p>
+				</div>
+
+				<div class="overall-review">
+					<img src="http://pluspng.com/img-png/star-png-star-vector-png-transparent-image-2000.png" id="star-rating">
+					<img src="http://pluspng.com/img-png/star-png-star-vector-png-transparent-image-2000.png" id="star-rating">
+					<img src="http://pluspng.com/img-png/star-png-star-vector-png-transparent-image-2000.png" id="star-rating">
+					<img src="http://pluspng.com/img-png/star-png-star-vector-png-transparent-image-2000.png" id="star-rating">
+					<img src="http://pluspng.com/img-png/star-png-star-vector-png-transparent-image-2000.png" id="star-rating">
+				</div>
+
+				<div class="review-text">
+					"Great atmosphere and the food was bursting with flavor. Left wanting more!"
+				</div>
+
+				<div class="review-photo">
+					<div class="photo-entry">
+						<img src="https://img.delicious.com.au/ku6i2Q-s/del/2018/05/mexican-black-bean-and-corn-nachos-81127-2.jpg" class="actual-photo">
+					</div>
+					<div class="photo-entry">
+						<img src="https://img.delicious.com.au/OzM_wuWR/del/2015/10/matt-prestons-homestyle-chicken-schnitzel-43709-2.jpg" class="actual-photo">
+					</div>
+				</div>
+
+				<div class="review-footer">
+                    <div class="footer-content">
+                        <img id="thumbs-up" src="https://www.svgrepo.com/show/522577/like.svg" alt="Thumbs-up">
+                        <p class="reply-text">Reply</p>
+                    </div>
+                </div>
+			
+			</div>
+                
+            <div class="recent-review">
+				<div class="review-header">
+			        <div class="user-info">
+						<div class="profile-picture">
+                            <a href="user-profile-reviews.html"><img src="https://i.pinimg.com/originals/6d/8b/9b/6d8b9b45c14da6fbfd09a7ede56b4a83.jpg"></a>
+                        </div>
+						    <p class="username">Dencel Pineda</p>
+					    </div>
+					<p class="date-time">February 2, 2025</p>
+				</div>
+
+				<div class="review-establishment">
+					<p id="title"><b>Perfect for a night out!</b></p>
+				</div>
+
+				<div class="overall-review">
+					<img src="http://pluspng.com/img-png/star-png-star-vector-png-transparent-image-2000.png" id="star-rating">
+					<img src="http://pluspng.com/img-png/star-png-star-vector-png-transparent-image-2000.png" id="star-rating">
+					<img src="http://pluspng.com/img-png/star-png-star-vector-png-transparent-image-2000.png" id="star-rating">
+					<img src="http://pluspng.com/img-png/star-png-star-vector-png-transparent-image-2000.png" id="star-rating">
+					<img src="http://pluspng.com/img-png/star-png-star-empty-png-2000.png" id="star-rating">
+				</div>
+
+				<div class="review-text">
+					The combination of great service, a cozy yet stylish ambiance, and flavorful dishes made this an unforgettable dining experience. Everything was cooked to perfection, and the drinks were just as impressive!
+				</div>
+
+				<div class="review-photo">
+					<div class="photo-entry">
+						<img src="https://img.delicious.com.au/uPioRFeO/del/2015/10/barbecued-butterflied-lamb-with-olive-oil-chips-13013-3.jpg" class="actual-photo">
+					</div>
+					<div class="photo-entry">
+						<img src="https://img.delicious.com.au/3uNOgPyY/del/2015/10/parmesan-and-sage-pork-cutlets-with-spiced-tomato-relish-15086-2.jpg" class="actual-photo">
+					</div>
+				</div>
+
+				<div class="review-footer">
+                       <div class="footer-content">
+                        <img id="thumbs-up" src="https://www.svgrepo.com/show/522577/like.svg" alt="Thumbs-up">
+                        <p class="reply-text">Reply</p>
+                    </div>
+                </div>
+			
+			</div>
+
+            <div class="recent-review">
+                <div class="review-header">
+                    <div class="user-info">
+                        <div class="profile-picture">
+                            <a href="user-profile-reviews.html"><img src="https://i.pinimg.com/originals/6d/8b/9b/6d8b9b45c14da6fbfd09a7ede56b4a83.jpg"></a>
+                        </div>
+                        <p class="username">Trish Aguarin</p>
+                    </div>
+                    
+                    <p class="date-time">January 31, 2025</p>
+                </div>
+
+                <div class="review-establishment">
+                    <p id="title"><b>Cool vibes, good food</b></p>
+                </div>
+
+                <div class="overall-review">
+                    <img src="http://pluspng.com/img-png/star-png-star-vector-png-transparent-image-2000.png" id="star-rating">
+                    <img src="http://pluspng.com/img-png/star-png-star-vector-png-transparent-image-2000.png" id="star-rating">
+                    <img src="http://pluspng.com/img-png/star-png-star-vector-png-transparent-image-2000.png" id="star-rating">
+                    <img src="http://pluspng.com/img-png/star-png-star-vector-png-transparent-image-2000.png" id="star-rating">
+                    <img src="http://pluspng.com/img-png/star-png-star-empty-png-2000.png" id="star-rating">
+                </div>
+
+                <div class="review-text">
+                    Loved the modern yet rustic decor, and the food was just as good as the reviews said. A few dishes stood out more than others, but overall, it was a great meal!
+                </div>
+
+                <div class="review-photo">
+                    <div class="photo-entry">
+                        <img src="https://img.delicious.com.au/08wT9U7s/del/2015/10/beef-brisket-with-horseradish-mash-14130-1.jpg" class="actual-photo">
+                    </div>
+                    <div class="photo-entry">
+                        <img src="https://img.delicious.com.au/ef5q1MD2/del/2015/10/baked-bangers-with-caramelised-sriracha-onions-14975-1.jpg" class="actual-photo">
+                    </div>
+                </div>
+
+                <div class="review-footer">
+                    <div class="footer-content">
+                        <img id="thumbs-up" src="https://www.svgrepo.com/show/522577/like.svg" alt="Thumbs-up">
+                        <p class="reply-text">Reply</p>
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="recent-review">
+                <div class="review-header">
+                    <div class="user-info">
+                        <div class="profile-picture">
+                            <a href="user-profile-reviews.html"><img src="https://i.pinimg.com/originals/6d/8b/9b/6d8b9b45c14da6fbfd09a7ede56b4a83.jpg"></a>
+                        </div>
+                        <p class="username">Philip Quijano</p>
+                    </div>
+                    
+                    <p class="date-time">January 26, 2025</p>
+                </div>
+
+                <div class="review-establishment">
+                    <p id="title"><b> Decent but expected more </b></p>
+                </div>
+
+                <div class="overall-review">
+                    <img src="http://pluspng.com/img-png/star-png-star-vector-png-transparent-image-2000.png" id="star-rating">
+                    <img src="http://pluspng.com/img-png/star-png-star-vector-png-transparent-image-2000.png" id="star-rating">
+                    <img src="http://pluspng.com/img-png/star-png-star-vector-png-transparent-image-2000.png" id="star-rating">
+                    <img src="http://pluspng.com/img-png/star-png-star-empty-png-2000.png" id="star-rating">
+                    <img src="http://pluspng.com/img-png/star-png-star-empty-png-2000.png" id="star-rating">
+                </div>
+
+                <div class="review-text">
+                    The presentation was nice, and the flavors were okay, but I was hoping for something more exciting. It wasn’t bad, just not as incredible as I had heard.
+                </div>
+
+                <div class="review-photo">
+                    <div class="photo-entry">
+                        <img src="https://img.delicious.com.au/wZ4WGxug/del/2015/10/fried-smashed-potatoes-with-garlic-and-lemon-14365-1.jpg" class="actual-photo">
+                    </div>
+                    <div class="photo-entry">
+                        <img src="https://img.delicious.com.au/JSYPieCL/del/2016/06/herb-and-garlic-porchetta-with-roast-winter-vegetables-32587-2.jpg" class="actual-photo">
+                    </div>
+                </div>
+
+                <div class="review-footer">
+                    <div class="footer-content">
+                        <img id="thumbs-up" src="https://www.svgrepo.com/show/522577/like.svg" alt="Thumbs-up">
+                        <p class="reply-text">Reply</p>
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="recent-review">
+                <div class="review-header">
+                    <div class="user-info">
+                        <div class="profile-picture">
+                            <a href="user-profile-reviews.html"><img src="https://i.pinimg.com/originals/6d/8b/9b/6d8b9b45c14da6fbfd09a7ede56b4a83.jpg"></a>
+                        </div>
+                        <p class="username">John Smith</p>
+                    </div>
+                    
+                    <p class="date-time">January 21, 2025</p>
+                </div>
+
+                <div class="review-establishment">
+                    <p id="title"><b>Tasty but a bit slow</b></p>
+                </div>
+
+                <div class="overall-review">
+                    <img src="http://pluspng.com/img-png/star-png-star-vector-png-transparent-image-2000.png" id="star-rating">
+                    <img src="http://pluspng.com/img-png/star-png-star-vector-png-transparent-image-2000.png" id="star-rating">
+                    <img src="http://pluspng.com/img-png/star-png-star-vector-png-transparent-image-2000.png" id="star-rating">
+                    <img src="http://pluspng.com/img-png/star-png-star-empty-png-2000.png" id="star-rating">
+                    <img src="http://pluspng.com/img-png/star-png-star-empty-png-2000.png" id="star-rating">
+                </div>
+
+                <div class="review-text">
+                    The flavors were fantastic, and the portion sizes were generous. The only downside was that the food took longer than expected.
+                </div>
+
+                <div class="review-photo">
+                    <div class="photo-entry">
+                        <img src="https://img.delicious.com.au/Aprb5g5O/del/2016/06/bushmans-steak-with-outback-sauce-31702-1.jpg" class="actual-photo">
+                    </div>
+                    <div class="photo-entry">
+                        <img src="https://img.delicious.com.au/c54IMB9I/del/2016/06/fish-burgers-31696-1.jpg" class="actual-photo">
+                    </div>
+                </div>
+
+                <div class="review-footer">
+                    <div class="footer-content">
+                        <img id="thumbs-up" src="https://www.svgrepo.com/show/522577/like.svg" alt="Thumbs-up">
+                        <p class="reply-text">Reply</p>
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="pages">
+                <a href="#" class="page-arrow">&lt;</a> 
+                <a href="#" class="page-number active">1</a>
+                <a href="#" class="page-number">2</a>
+                <a href="#" class="page-number">3</a>
+                <span class="dots">...</span>
+                <a href="#" class="page-number">5</a>
+                <a href="#" class="page-arrow">&gt;</a>
+            </div>
+
+        </div>
+        
+        <div class="right-profile-body"></div>
+    </div>
+    <script src="home-page.js"></script>
+  </body>
+</html>
