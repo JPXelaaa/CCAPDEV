@@ -1,8 +1,8 @@
 body {
-    font-family: Arial, sans-serif;
+    font-family: 'Lato';
     margin: 0;
     padding: 0;
-    background-color: #f8f8f8;
+    background-color: #FAF5F5;
 }
 
  /* Navigation Bar */
@@ -42,6 +42,7 @@ body {
     margin: 0 10px;
     text-decoration: none;
     color: inherit;
+    font-weight: bold;
   }
 
   .profile-option {
@@ -103,7 +104,8 @@ body {
 #resto-name {
   font-size: 24px;
   font-weight: bold;
-  margin-left: 20px; 
+  margin-left: 20px;
+  font-family: 'Montserrat'; 
 }
 
 .restaurant-rating {
@@ -138,7 +140,7 @@ body {
   padding: 10px;
   width: 80%;
   margin: auto;
-  border-radius: 5px;
+  border-radius: 20px;
   display: flex;
   flex-direction: column;
   align-items: left;
@@ -160,7 +162,6 @@ body {
 .overall-review {
   justify-content: left;
   margin-left: 4.8%;
- 
 }
 
 .user-info {
@@ -178,6 +179,8 @@ body {
 .username {
   margin: 0;
   margin-left: 10px; 
+  font-family: 'Montserrat';
+  font-weight: bold;
 }
 
 .date-time {
@@ -200,6 +203,7 @@ body {
   text-align: center; 
   margin-left: 5%;
   gap: 2%;
+  font-weight: bold;
 }
 
 .review-footer img {
@@ -221,7 +225,7 @@ body {
   text-align: center; 
   border-radius: 50px;
   padding: 3px 10px;
-  width: 140px;
+  width: 150px;
   gap: 7%;
 }
 

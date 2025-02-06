@@ -5,10 +5,6 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Sign Up</title>
   <style>
-    body {
-      font-family: 'Montserrat';
-    }
-
     .modal {
       position: fixed; 
       z-index: 1; 
@@ -27,9 +23,10 @@
       margin: 10% auto;
       padding: 20px;
       border: 1px solid #888;
-      width: 30%; 
-      max-width: 300px;
+      width: 50%; 
+      max-width: 300px; 
       border-radius: 10px;
+      text-align: center;
     }
 
     #sign-up-title {
@@ -179,10 +176,25 @@
 
       <!-- Submit Button (aligned to right) -->
       <div class="submit-container">
-        <button type="submit" class="submit-cancel">CANCEL</button>
-        <button type="submit" class="submit-delete">DELETE</button>
+        <button type="button" class="submit-cancel" id="cancelButton">CANCEL</button>
+        <button type="button" class="submit-delete" id="deleteButton">DELETE</button>
       </div>
     </div>
   </div>
+  <script>
+    function closeModal() {
+      document.getElementById("loginModal").style.display = "none";
+    }
+
+    document.getElementById("deleteButton").addEventListener("click", function() {
+      window.parent.postMessage("closeDelete", "*");
+      window.top.location.href = "/../USER/starting-page-carousel.html";
+    });
+
+    document.getElementById("cancelButton").addEventListener("click", function() {
+      window.parent.postMessage("closeCancel", "*");
+      window.location.reload();
+    });
+  </script>
 </body>
 </html>
