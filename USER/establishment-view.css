@@ -66,12 +66,14 @@ body {
 
   .nav-right h4 {
     margin: 0;
+    font-weight: bold;
   }
 
   .nav-right a {
     margin: 0 10px;
     text-decoration: none;
     color: inherit;
+    font-weight: bold;
   }
 
   .profile-option {
