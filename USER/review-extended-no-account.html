@@ -14,35 +14,39 @@
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap" rel="stylesheet">
 
-    
+    <style> 
+
+#log-in {
+  width: 100px;
+  height: 30px;
+  background-color: #Faf5f5;
+  border-radius: 10px;
+}
+
+#sign-up {
+  width: 100px;
+  height: 30px;
+  color: #fff;
+  background-color: #b16757;
+  border-radius: 10px;
+}
+    </style>
 </head>
 
 <body>
-    <!-- NAVIGATION BAR -->
+    <!--Navigation Bar-->
     <nav>
       <div class="nav-left">
         <img src="../Resources/BiteRate.png" id="page-logo">
-        </div>
-    
-        <div class="nav-center">
-            <input type="text" placeholder="Search for more establishments..." class="search-bar">
-        </div>
-    
-        <div class="nav-right">
-          <h4><a href="home-page-carousel.html">Home</a></h4> <!--GOES TO HOME PAGE CAROUSEL-->
-          <h4><a href="own-user-profile-review.html">Profile</a></h4> <!--GOES TO USER PROFILE-->
-          <div class="profile-container">
-            <div class="profile-option" onclick="toggleLogOut()">
-              <img src="https://i.pinimg.com/originals/6d/8b/9b/6d8b9b45c14da6fbfd09a7ede56b4a83.jpg">
-            </div>
-            <div id="dropdownLogOut" class="absolute top-12 right-0 bg-white shadow-lg border rounded-md z-50 hidden">
-                <ul>
-                  <a href="starting-page-carousel.html"><li class="p-2 hover:bg-gray-100 cursor-pointer">Log out</li></a>
-                </ul>
-              </div>
-          </div>
-          
-        </div>
+      </div>
+
+      <div class="nav-center"></div>
+
+      <div class="nav-right">
+        <a href="starting-page-carousel.html">Home</a> 
+        <button id="log-in">LOG IN</button>
+        <button id="sign-up">SIGN UP</button>
+      </div>
     </nav>
     
     <!--Restaurant Information-->
